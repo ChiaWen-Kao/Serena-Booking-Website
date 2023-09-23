@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sereno</title>
+  <!-- Import Boostrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Import CSS -->
+  <link rel="stylesheet" href="css/general_styles.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Sereno</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav nav-underline">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="all-activity.html">All Acivity</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="chat-with-mate.html">Chat with Mate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <!-- d-flex class makes the div a flex container, and align-items-center vertically aligns its contents -->
+            <div class="d-inline-flex align-items-center">
+              <a class="nav-link" aria-current="page" href="cart.html">
+                <img src="https://img.icons8.com/92A07E/material-rounded/24/shopping-cart.png" alt="shopping-cart" />
+                Cart
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="account.html">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-success">Login</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="main-view">
+    <section class="home-banner">
+      <div class="container text-center search-bar">
+        <form class="search-form">
+          <div class="row keyword-search">
+            <div class="col-10 keyword-input">
+              <input type="text" id="keywordSearch" class="form-control" placeholder="Search for event name"
+                aria-describedby="passwordHelpBlock">
+            </div>
+            <div class="col-2">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+          <hr class="divider-solid">
+          <div class="row advanced-search">
+            <div class="col date"></div>
+            <div class="col location"></div>
+            <div class="col budget">
+              <label for="customRange1" class="form-label">Example range</label>
+              <input type="range" class="form-range" id="customRange1">
+            </div>
+            <div class="col category">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Select Category</option>
+                <option value="1">Fitness & Exercise</option>
+                <option value="2">Nutrition & Diet</option>
+                <option value="3">Mental Health</option>
+                <option value="4">Handcraft</option>
+                <option value="5">Friending</option>
+              </select>
+            </div>
+        </form>
+      </div>
+    </section>
+  </div>
+  <div class="test"></div>
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-white text-muted">
+    <!-- Section links -->
+    <section class="">
+      <div class="container text-centertext-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-1 col-lg-1 col-xl-1 mx-auto mb-1">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Explore</h6>
+            <p>
+              <a href="index.html" class="text-reset">Home</a>
+            </p>
+            <p>
+              <a href="all-activity.html" class="text-reset">Activity</a>
+            </p>
+            <p>
+              <a href="blog.html" class="text-reset">Blog</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+          <!-- Grid column -->
+          <div class="col-md-1 col-lg-1 col-xl-1 mx-auto mb-1">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">About Us</h6>
+            <p>
+              <a href="index.html" class="text-reset">Contact Us</a>
+            </p>
+            <p>
+              <a href="all-activity.html" class="text-reset">FAQs</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-2">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Further Information</h6>
+            <p>
+              <a href="index.html" class="text-reset">Privacy Policy</a>
+            </p>
+            <p>
+              <a href="all-activity.html" class="text-reset">Terms of Service</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+          <!-- Grid column -->
+          <div class="col-md-5 col-lg-5 col-xl-5 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Subscribe to Our Newsletter</h6>
+            <p>You will never miss our new release experiences, discount, etc. Our newsletter is once a week, every
+              Friday.</p>
+            <div class="input-group mb-3">
+              <input type="email" class="form-control input-newsletter" placeholder="user@yoursite.com" aria-label="Newsletter Subscribe" aria-describedby="button-newsletter">
+              <button class="btn btn-outline-secondary" type="button" id="button-newsletter">Subscribe</button>
+            </div>
+          </div>
+          <!-- Grid column -->
+        </div>
+      </div>
+    </section>
+    <!-- Section: Links -->
+    <!-- Copyright -->
+    <div class="text-center p-4">
+      DECO7140 Introduction of Web Design | Chia-Wen Kao
+    </div>
+    <!-- Copyright -->
+  </footer>
+</body>
+
+</html>
