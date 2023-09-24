@@ -3,33 +3,37 @@
     Retrieved from color.adobe.com
 */
 :root {
-    /* Color Theme Swatches in Hex */
-    --dark1: rgb(71,89,54);    /* #475936 */
+    --dark1: rgb(71, 89, 54);    /* #475936 */
     --dark2: rgb(146, 160, 126);    /* #92A07E */
-    --lightgreen1: rgb(208,222,188);    /* #D0DEBC */
-    --mainbackground: rgb(243,243,243);    /* #F3F3F3 */
-    --orange: rgb(245,164,0);    /* #F5A400 */
+    --lightgreen: rgb(208, 222, 188);    /* #D0DEBC */
+    --darkgrey: rgb(149, 149, 149);    /* #959595 */
+    --mainbackground: rgb(243, 243, 243);    /* #F3F3F3 */
+    --orange: rgb(245, 164, 0);    /* #F5A400 */
 }
 
-/*
-    Setting the website font-family
-*/
+/* Setting the website font-style */
 body {
-    font-family: "Poppins", sans-serif;
     font-size: small;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
 }
 
-/* 
-    Style the header and on-scroll
-*/
+.btn {
+    font-size: small;
+    color: white;
+    border-width: 0.1em;
+    border-color: white !important;
+    background-color: var(--dark1);
+}
+
+.btn:hover {
+    background-color: var(--dark2);
+}
+
+/* Navbar */
 .bg-body-tertiary {
-    padding: 2vh 6vw;
-    background-color: white !important;
-    box-shadow: 3px 0px 10px rgb(71,89,54, 0.2);
-}
-
-.nav-link {
-    color: var(--dark2);
+    padding: 20px 100px;
+    box-shadow: 3px 0px 10px rgb(71, 89, 54, 0.2);
 }
 
 .nav-link:hover {
@@ -40,118 +44,33 @@ body {
     color: var(--dark1) !important;
 }
 
-/* Button style */
-.nav-item > button {
+/* Cart icon will change color when hovering */
+.nav-link > img {
+    margin-top: -3px;
+    content: url("https://img.icons8.com/575757/material-rounded/24/shopping-cart.png");
+}
+
+.nav-link:hover > img {
+    content: url("https://img.icons8.com/475936/material-rounded/24/shopping-cart.png");
+}
+
+/* Footer */
+.footer {
+    color: white;
     background-color: var(--dark1);
-    color: white;
-    border-radius: 35.5px;
-}
-
-/*
-    Search Bar
-*/
-.home-banner {
-    position: relative;
-    padding: 200px 0;
-    height: 100%;
-    background-image: url("https://images.unsplash.com/photo-1519671282429-b44660ead0a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
-    background-position: 40%;
-    background-size: cover;    
-}
-
-.search-bar {
-    position: absolute;
-    margin-top: 15vh;
-    left: 0;
-    right: 0;
-    width: 60%;
-    height: 200px;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 3px 0px 10px rgb(71,89,54, 0.2);
-}
-
-/* Keyword Search */
-.search-form {
-    position: relative;
-    padding: 3vw;
-    width: 100%;
-}
-
-.keyword-search {
-    align-items: center;
-}
-
-.btn-primary {
-    border-radius: 40px;
-    background-color: var(--dark1);
-    color: white;
-}
-
-.btn-primary:hover {
-    border-radius: 40px;
-    background-color: var(--dark1);
-    color: white;
-}
-
-.divider-solid {
-    margin: 5vh 0;
-    color: rgb(71,89,54, 0.5);
-}
-
-.advanced-search > col{
-    background-color: var(--mainbackground);
-}
-
-/* Test */
-.test {
-    position: relative;
-    height: 50vh;
-}
-
-
-
-/*
-    Footer
-*/
-section {
-    background-color: var(--dark1) !important;
-    color: white;
-    text-decoration: none !important;
-    
 }
 
 footer a {
-    text-decoration: none !important;
+    text-decoration: none !important;    /* remove underline of link */
 }
 
-.mt-3 h6 {
-    margin-top: 1.5rem;    /* each link has margin-bottom: 1rem, add top to balance it*/
-    text-transform: capitalize !important;    /* Make the first letter of each word capital*/
-}
-
-.p-4 {
-    display: flex;
-    align-items: center;    /* vertical center*/
-    justify-content: center;    /* horizontal center*/
-    height: 2vh;
-    background-color: var(--mainbackground);
-    font-size: 0.8em;
-}
-
-/* Newsletter button */
+/* Newsletter */
 .input-newsletter {
-    border: 0;
-    text-align: center;
+    text-align: center;    /* hint text of input form */
     font-size: small;
 }
 
-#button-newsletter {
-    color: white;
-    border-color: white;
-    border-width: 0.1em;
-}
-
-#button-newsletter:hover {
-    background-color: var(--dark2);
+/* Copyright */
+.copyright {
+    color: var(--dark1);
 }
