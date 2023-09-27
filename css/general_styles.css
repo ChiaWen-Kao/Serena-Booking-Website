@@ -57,6 +57,10 @@ body {
     box-shadow: 3px 0px 10px rgb(71, 89, 54, 0.2);
 }
 
+.nav-link {
+    color: #707071;
+}
+
 .nav-link:hover {
     color: var(--dark1);
 }
@@ -183,4 +187,9 @@ footer a {
 /* Copyright */
 .copyright {
     color: var(--dark1);
+}
+
+/* Blog */
+.category-tab {
+    color: var(--darkgrey) !important;
 }

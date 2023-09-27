@@ -18,19 +18,112 @@
     rel="stylesheet">
 </head>
 <body>
-<!-- Footer -->
-  <footer class="text-center text-lg-start bg-white text-muted">
-    <!-- Section links -->
-    <section class="">
-      <div class="container text-centertext-md-start mt-5">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top"> <!-- navbar-expand-lg: large window-show menu / bg-body-tertiary: appearance of the navbar / fixed-top: navbar will fix at top when scrolling -->
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Sereno</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Sereno Home"> <!-- navbar-toggler hide navigation menu on smaller screens -->
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav"> <!-- justify-content-end: align to right -->
+        <ul class="navbar-nav nav-underline"> <!-- nav-underline: hover on link show underline -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="all-activity.html">All Acivity</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="chat-with-mate.html">Chat with Mate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <!-- d-flex class makes the div a flex container, and align-items-center vertically aligns its contents -->
+            <div class="d-inline-flex align-items-center">
+              <a class="nav-link" aria-current="page" href="cart.html">
+                <img id="shopping-cart-icon" alt="shopping-cart" />
+                <span>Cart</span>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="account.html">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-success" id="login">Login</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Test -->
+  <div style="height: 200px;"></div>
+
+  <!-- Category Tab -->
+  <section class="category-tab mb-5">
+    <div class="container">
+      <ul class="nav nav-tabs justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">All</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Lifestyle</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cooking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Stress Management</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Fitness</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Social</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Handcraft</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Article List -->
+  <section class="article-list">
+    <div class="container">
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="..." class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start mt-5"> <!-- text-lg-start: large window-text left alignment / mt-5: 5 margin-top -->
+    <!-- Section: links -->
+    <section class="footer">
+      <div class="container text-center text-md-start p-5"> <!-- p-5: 5 padding-top -->
         <!-- Grid row -->
-        <div class="row mt-3">
+        <div class="row">
           <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <div class="col-md-1 col-lg-1 col-xl-1 mx-auto"> <!-- mx-auto: horizontal margin to div -->
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Explore</h6>
-            <p>
-              <a href="index.html" class="text-reset">Home</a>
+            <h6 class="fw-bold mt-4 mb-4">Explore</h6> <!-- fw-bold: bold font-wight -->
+            <p> <!-- make sure the space between each link -->
+              <a href="index.html" class="text-reset">Home</a> <!-- text-reset: removes any custom text color -->
             </p>
             <p>
               <a href="all-activity.html" class="text-reset">Activity</a>
@@ -41,9 +134,9 @@
           </div>
           <!-- Grid column -->
           <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <div class="col-md-1 col-lg-1 col-xl-1 mx-auto">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">About Us</h6>
+            <h6 class="fw-bold mt-4 mb-4">About Us</h6>
             <p>
               <a href="index.html" class="text-reset">Contact Us</a>
             </p>
@@ -53,9 +146,9 @@
           </div>
           <!-- Grid column -->
           <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Further Information</h6>
+            <h6 class="fw-bold mt-4 mb-4">Further Information</h6>
             <p>
               <a href="index.html" class="text-reset">Privacy Policy</a>
             </p>
@@ -65,21 +158,26 @@
           </div>
           <!-- Grid column -->
           <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <div class="col-md-5 col-lg-5 col-xl-5 mx-auto">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Subscribe to Our Newsletter</h6>
-            <p>You will never miss our new release experiences, discount, etc. Our newsletter is once a week, every
-              Friday.</p>
+            <h6 class="fw-bold mt-4 mb-4">Subscribe to Our Newsletter</h6>
+            <p>You will never miss our new release experiences, discount, etc. Our newsletter is once a week, every Friday.</p>
+            <div class="input-group mb-3">
+              <input type="email" class="form-control input-newsletter" placeholder="user@yoursite.com" aria-label="Newsletter Subscribe" aria-describedby="button-newsletter">
+              <button class="btn btn-outline-secondary" type="button" id="button-newsletter">Subscribe</button>
+            </div>
           </div>
           <!-- Grid column -->
         </div>
       </div>
     </section>
-    <!-- Section: Links -->
+    <!-- Section: links -->
     <!-- Copyright -->
-    <div class="text-center p-4">
-      DECO7140 Introduction of Web Design | Chia-Wen Kao
-    </div>
+    <section class="copyright">
+      <div class="text-center p-3"> <!-- p-3: 3 padding -->
+        DECO7140 Introduction of Web Design | Chia-Wen Kao
+      </div>
+    </section>
     <!-- Copyright -->
   </footer>
 </body>
