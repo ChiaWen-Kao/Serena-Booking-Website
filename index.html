@@ -16,6 +16,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- Google Map -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIPd3N7noO3Mv0KFGY40KC2pvWX04oXjE&callback=initMap&v=weekly" defer></script>
 </head>
 
 <body>
@@ -63,9 +66,157 @@
   <!-- Test -->
   <div style="height: 200px;"></div>
 
+  <!-- Category -->
+  <section class="category mb-5">
+    <div class="container">
+      <h4 class="fw-bold mb-5">Category</h4>
+      <div class="row">
+        <!-- Fitness and Exercise -->
+        <div class="card text-center mb-3 me-3 category-card" style="width: 12rem; background: url('https://images.unsplash.com/photo-1579454566790-f9e5697ddf36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2684&q=80');">
+          <div class="card-body">
+            <h5 class="card-title mt-2 mb-4">
+              Fitness<br>
+              &<br>
+              Exercise
+            </h5>
+            <a href="#" class="btn btn-primary mt-4 mb-2">Explore</a>
+          </div>
+        </div>
+        <!-- Nutrition and Diet -->
+        <div class="card text-center mb-3 me-3 category-card" style="width: 12rem; background: url('https://images.pexels.com/photos/4253320/pexels-photo-4253320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+          <div class="card-body">
+            <h5 class="card-title mt-2 mb-4">
+              Nutrition<br>
+              &<br>
+              Diet
+            </h5>
+            <a href="#" class="btn btn-primary mt-4 mb-2">Explore</a>
+          </div>
+        </div>
+        <!-- Mental Health and Wellness -->
+        <div class="card text-center mb-3 me-3 category-card" style="width: 12rem; background: url('https://images.unsplash.com/photo-1566333449824-f58e920a21b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80');">
+          <div class="card-body">
+            <h5 class="card-title mt-2 mb-4">
+              Nutrition<br>
+              &<br>
+              Diet
+            </h5>
+            <a href="#" class="btn btn-primary mt-4 mb-2">Explore</a>
+          </div>
+        </div>
+        <!-- Handcraft -->
+        <div class="card text-center mb-3 me-3 category-card" style="width: 12rem; background: url('https://images.unsplash.com/photo-1572725335307-3303414b3360?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80');">
+          <div class="card-body">
+            <h5 class="card-title mt-2 mb-4">
+              <br>
+              Handcraft</h5><br>
+            <a href="#" class="btn btn-primary mt-4 mb-2">Explore</a>
+          </div>
+        </div>
+        <!-- Friending -->
+        <div class="card text-center mb-3 me-3 category-card" style="width: 12rem; background: url('https://images.unsplash.com/photo-1569937755776-cf7f47af4b73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80');">
+          <div class="card-body">
+            <h5 class="card-title mt-2 mb-4">
+              <br>
+              Friending</h5><br>
+            <a href="#" class="btn btn-primary mt-4 mb-2">Explore</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Activity -->
+  <section class="popular-activity mb-5">
+    <div class="container">
+      <h4 class="fw-bold mb-5">Popular Activity</h4>
+      <div class="row align-items-center">
+        <div class="col col-lg-1">
+          <button type="button" class="btn popular-activity-arrow" style="transform: rotate(180deg);" aria-label="Next"></button>
+        </div>
+        <div class="col-md-auto d-flex">
+          <div class="card border-light p-2 me-3" style="width: 18rem;">
+            <button type="button" class="wishlist" aria-label="add-wishlist"></button>
+            <span class="badge text-bg-warning text-center sale-label">Sale</span>
+            <img src="https://images.unsplash.com/photo-1577253313708-cab167d2c474?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2638&q=80" class="img-fluid rounded card-img-top" alt="natural-meditation">
+            <div class="card-body pb-2">
+              <h5 class="card-title">Card title</h5>
+              <div class="row mb-2">
+                <div class="col-md-2">
+                  <img width="100%" src="https://img.icons8.com/ios/50/959595/navigation.png" alt="location"/>
+                </div>
+                <div class="col-sm-10 p-0">
+                  <span class="text-muted fw-light">South Bank, Australia</span>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-2">
+                  <img width="100%" src="https://img.icons8.com/ios/50/959595/clock--v3.png" alt="time" />
+                </div>
+                <div class="col-md-10 p-0">
+                  <span class="text-muted fw-light">Sat, 05 September 2023</span>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">meditation</a>
+              <a href="#" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">stress relieve</a>
+              <div class="row align-items-center mt-4">
+                <div class="col-md-2 pe-0">
+                  <img width="70%" src="https://img.icons8.com/ios-filled/50/FFC500/star--v1.png" alt="star--v1"/>
+                </div>
+                <div class="col-md-4 ps-0">
+                  <span>4.8</span>
+                  <span>(100)</span>
+                </div>
+                <div class="col-md-6 text-end fw-bold fs-5" style="color: var(--orange);">AUD $85</div>
+              </div>
+            </div>
+          </div>
+          <div class="card border-light p-2" style="width: 18rem;">
+            <button type="button" class="wishlist" aria-label="add-wishlist"></button>
+            <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80" class="img-fluid rounded card-img-top" alt="natural-meditation">
+            <div class="card-body pb-2">
+              <h5 class="card-title">Card title</h5>
+              <div class="row mb-2">
+                <div class="col-md-2">
+                  <img width="100%" src="https://img.icons8.com/ios/50/959595/navigation.png" alt="location"/>
+                </div>
+                <div class="col-sm-10 p-0">
+                  <span class="text-muted fw-light">South Bank, Australia</span>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-2">
+                  <img width="100%" src="https://img.icons8.com/ios/50/959595/clock--v3.png" alt="time" />
+                </div>
+                <div class="col-md-10 p-0">
+                  <span class="text-muted fw-light">Sat, 05 September 2023</span>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">meditation</a>
+              <a href="#" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">stress relieve</a>
+              <div class="row align-items-center mt-4">
+                <div class="col-md-2 pe-0">
+                  <img width="70%" src="https://img.icons8.com/ios-filled/50/FFC500/star--v1.png" alt="star--v1"/>
+                </div>
+                <div class="col-md-4 ps-0">
+                  <span>4.8</span>
+                  <span>(100)</span>
+                </div>
+                <div class="col-md-6 text-end fw-bold fs-5" style="color: var(--orange);">AUD $85</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-lg-1">
+          <button type="button" class="btn popular-activity-arrow" aria-label="Back"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Review -->
   <div class="background-color"> <!-- for review section background-color -->
-    <section class="review">
+    <section class="review mb-5">
       <div class="container pt-5 pb-5">
         <div class="row">
           <div class="col-sm-6">
@@ -85,36 +236,96 @@
             <button type="button" class="btn arrow" aria-label="Back"></button>
           </div>
         </div>
-        <div class="row mt-5" id="review-card">
-          <div class="card review-background" style="width: 25rem;">
-            <div class="card-body p-4">
-              <div class="row">
-                <div class="col-sm-2 ps-0">
-                  <div class="rounded-image">
-                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1961&q=80" alt="avatar1" />
+        <div class="row mt-5" id="review-card"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Nearby Activity -->
+  <section class="nearby-activity mb-5">
+    <div class="container">
+      <h4 class="fw-bold mb-5">See Today's Activity Around You</h4>
+      <div class="row">
+        <div class="col-sm-6" id="map"></div>
+        <div class="col-sm-6">
+          <div class="card border-light nearby-activity-card">
+            <div class="row align-items-center p-2">
+              <div class="col-md-4">
+                <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="wellness-in-natural">
+              </div>
+              <div class="col-md-6 p-0">
+                <div class="card-body p-0 pt-1 pb-1">
+                  <h5 class="card-title">Card title</h5>
+                  <div class="row">
+                    <div class="col-md-1 pe-0">
+                      <img width="100%" src="https://img.icons8.com/material-outlined/48/959595/clock--v1.png" alt="time" />
+                    </div>
+                    <div class="col-md-11 ps-1">
+                      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
                   </div>
-                </div>
-                <div class="col-sm-10 d-flex align-items-center ps-0">
-                  <h5 class="card-title mb-0" id="review-username">Rachel S.</h5>
+                  <p class="card-text mt-2">Explore outdoor yoga sessions, bringing you closer to both well-being and the great outdoors.</p>
                 </div>
               </div>
-              <div class="row mt-4">
-                <div class="col-sm-1 ps-0">
-                  <img src="https://img.icons8.com/ios-glyphs/60/FFFFFF/quote-right.png" style="width: 100%; transform: rotate(180deg);" alt="quote-left" />
+              <div class="col-md-2 text-center">
+                <button class="btn btn-primary btn-sm" type="button">Join</button>
+              </div>
+            </div>
+          </div>
+          <p></p>
+          <div class="card border-light nearby-activity-card">
+            <div class="row align-items-center p-2">
+              <div class="col-md-4">
+                <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="wellness-in-natural">
+              </div>
+              <div class="col-md-6 p-0">
+                <div class="card-body p-0 pt-1 pb-1">
+                  <h5 class="card-title">Card title</h5>
+                  <div class="row">
+                    <div class="col-md-1 pe-0">
+                      <img width="100%" src="https://img.icons8.com/material-outlined/48/959595/clock--v1.png" alt="time" />
+                    </div>
+                    <div class="col-md-11 ps-1">
+                      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                  <p class="card-text mt-2">Explore outdoor yoga sessions, bringing you closer to both well-being and the great outdoors.</p>
                 </div>
-                <div class="col-sm-10">
-                  <p class="card-text">Discovering Sereno has been a delight! This fantastic website has unlocked a world of local experiences, making it easy to find hidden gems and exciting events in my community.</p>
+              </div>
+              <div class="col-md-2 text-center">
+                <button class="btn btn-primary btn-sm" type="button">Join</button>
+              </div>
+            </div>
+          </div>
+          <p></p>
+          <div class="card border-light nearby-activity-card">
+            <div class="row align-items-center p-2">
+              <div class="col-md-4">
+                <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="wellness-in-natural">
+              </div>
+              <div class="col-md-6 p-0">
+                <div class="card-body p-0 pt-1 pb-1">
+                  <h5 class="card-title">Card title</h5>
+                  <div class="row">
+                    <div class="col-md-1 pe-0">
+                      <img width="100%" src="https://img.icons8.com/material-outlined/48/959595/clock--v1.png" alt="time" />
+                    </div>
+                    <div class="col-md-11 ps-1">
+                      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                  <p class="card-text mt-2">Explore outdoor yoga sessions, bringing you closer to both well-being and the great outdoors.</p>
                 </div>
-                <div class="col-sm-1 d-flex align-items-end pe-0">
-                  <img src="https://img.icons8.com/ios-glyphs/60/FFFFFF/quote-right.png" style="width: 100%;" alt="quote-right" />
-                </div>
+              </div>
+              <div class="col-md-2 text-center">
+                <button class="btn btn-primary btn-sm" type="button">Join</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="text-center text-lg-start mt-5"> <!-- text-lg-start: large window-text left alignment / mt-5: 5 margin-top -->
@@ -186,7 +397,5 @@
     <!-- Copyright -->
   </footer>
 </body>
-<!-- Import-->
-
 
 </html>

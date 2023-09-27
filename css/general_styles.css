@@ -47,6 +47,10 @@ body {
     object-fit: cover;    /* maintain aspect ratio and cover the circular container */
 }
 
+.card-title {
+    color: var(--dark1);
+}
+
 /* Navbar */
 .bg-body-tertiary {
     padding: 20px 100px;
@@ -71,6 +75,67 @@ body {
     content: url("https://img.icons8.com/475936/material-rounded/24/shopping-cart.png");
 }
 
+/* Category */
+.category > h4 {
+    color: white;
+}
+
+.category-card {
+    border-style: none;
+    background-size: 100% !important;
+    background-repeat: none;
+}
+
+.category-card > div > h5 {
+    color: white;
+}
+
+.category-card > div > a {
+    color: var(--dark1);
+    background-color: white;
+}
+
+/* Popular Activity */
+.popular-activity-arrow {
+    width: 30px;
+    height: 30px;
+    background-color: transparent !important;
+    background-image: url("https://img.icons8.com/ios-glyphs/30/475936/circled-chevron-right.png");
+}
+
+.popular-activity-arrow:hover {
+    background-color: transparent !important;
+    background-image: url("https://img.icons8.com/ios-glyphs/30/D0DEBC/circled-chevron-right.png");
+}
+
+.card {
+    box-shadow: 3px 3px 8px rgb(71, 89, 54, 0.1);
+}
+
+.sale-label {
+    position: absolute;
+    top: 35%;
+    left: 2%;
+    padding: 5px 10px;
+    height:fit-content;
+    color: white !important;
+    border-radius: 0px 2px 2px 0px;
+}
+
+.wishlist {
+    position: absolute;
+    top: 4%;
+    right: 5%;
+    width: 24px;
+    height: 24px;
+    background: url("https://img.icons8.com/material-outlined/24/FFFFFF/like--v1.png");
+    border-style: none;
+}
+
+.wishlist:hover {
+    background-color: transparent;
+}
+
 /* Review */
 .review {
     color: white;
@@ -85,13 +150,18 @@ body {
 .arrow {
     width: 30px;
     height: 30px;
-    background: url("https://img.icons8.com/ios-glyphs/30/ffffff/circled-chevron-right.png");
+    background-image: url("https://img.icons8.com/ios-glyphs/30/ffffff/circled-chevron-right.png");
     border-style: none;
 }
 
 .arrow:hover {
     background-color: transparent;
-    background: url("https://img.icons8.com/ios-glyphs/30/D0DEBC/circled-chevron-right.png");;
+    background-image: url("https://img.icons8.com/ios-glyphs/30/D0DEBC/circled-chevron-right.png");
+}
+
+/* Nearby Activity */
+.nearby-activity-card{
+    box-shadow: 2px 2px 5px rgb(71, 89, 54, 0.1);
 }
 
 /* Footer */

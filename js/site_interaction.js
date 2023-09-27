@@ -1,11 +1,12 @@
-/* Comment */
-const baseURL = "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/comments/";
+/* 
+    Comment 
+*/
+const commentBaseURL = "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/comments/";
 
-const getCommentsURL = `${baseURL}?website_code=sereno`;
+const getCommentsURL = `${commentBaseURL}?website_code=sereno`;
 const getCommentsMethod = "GET";
 
-// Fetch comment API
-fetch(getCommentsURL, {
+fetch(getCommentsURL, {    // Fetch comment API
     method: getCommentsMethod,
 })
     .then(response => response.json())
@@ -50,4 +51,25 @@ fetch(getCommentsURL, {
             reviewCardContainer.appendChild(reviewCard);
         });
     });
-        
+
+/* 
+    Current Location (current location and nearby activity marks)
+*/
+// navigator.geolocation.getCurrentPosition(position => {
+//     const { latitude, longitude } = position.coords;
+//     console.log(latitude, longitude)
+    
+//     // Show a map centered at latitude / longitude.
+//     const mapContainer = document.getElementById("map");    // create map in this container
+
+//     mapContainer.innerHTML = `
+//         <iframe width="100%" height="auto" style="border:0" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCIPd3N7noO3Mv0KFGY40KC2pvWX04oXjE&q=${latitude},${longitude}"></iframe>
+//     `;
+// });
+
+/*
+    Nearby Activity List
+*/
+
+
+    
