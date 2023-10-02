@@ -65,6 +65,11 @@ body {
     color: var(--dark1);
 }
 
+.nav-link:focus {
+    color: var(--dark1);
+    font-weight: 500;
+}
+
 .active {
     color: var(--dark1) !important;
 }
@@ -192,4 +197,34 @@ footer a {
 /* Blog */
 .category-tab {
     color: var(--darkgrey) !important;
+}
+
+/* Carousel */
+.carousel {
+    margin-top: 80px;
+}
+
+.carousel-item {
+    height: 300px;
+}
+
+.carousel-img {
+    margin-top: -20vh;    /* move image up */
+}
+
+/* Article List */
+.article-list {
+    height: 200px;
+    overflow: hidden;
+}
+
+.article-list-img {
+    width: 100%;
+    margin-top: -80px;
+}
+
+.breadcrumb-item > a {
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--darkgrey);
 }
