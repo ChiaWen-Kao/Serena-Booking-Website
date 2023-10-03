@@ -68,8 +68,8 @@ fetch(getCommentsURL, {    // Fetch comment API
 // });
 
 /*
-    Nearby Activity List
+    Datepicker
 */
-
-
-    
+$(function(){
+    $('#datepicker').datepicker();
+  });

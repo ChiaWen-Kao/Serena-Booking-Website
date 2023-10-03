@@ -16,6 +16,7 @@ body {
     font-size: small;
     font-weight: 500;
     font-family: "Poppins", sans-serif;
+    background-color: var(--mainbackground);
 }
 
 .btn {
@@ -84,9 +85,75 @@ body {
     content: url("https://img.icons8.com/475936/material-rounded/24/shopping-cart.png");
 }
 
+/* Banner */
+.banner {
+    margin-bottom: 150px !important;
+    height: 350px;
+    background-image: url("https://images.unsplash.com/photo-1519671282429-b44660ead0a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -350px;
+}
+
+.search-bar {
+    position: relative;
+    top: 275px;
+    width: 70%;
+    height: 150px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgb(71, 89, 54, 0.1);
+}
+
+.keyword-search > span {
+    background: none;
+    border-style: none;
+}
+
+.keyword-search > input {
+    color: var(--darkgrey);
+}
+
+.advance-search {
+    position: relative;
+}
+
+form {
+    position: relative;
+    top: 250px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgb(71, 89, 54, 0.1);
+}
+
+.form-control {
+    width: 100%;
+    color: var(--dark1);
+    background-color: var(--mainbackground);
+    border-style: none;
+}
+
+#advanced-search-category {
+    width: 100%;
+    color: var(--dark1);
+    background-color: var(--mainbackground);
+}
+
+.dropdown-item, .dropdown-item:focus {
+    font-size: small;
+    color: black;
+    background-color: white;
+}
+
+.active {
+    width: 100%;
+    color: var(--dark1);
+    background-color: var(--mainbackground) !important;
+}
+
 /* Category */
 .category > h4 {
-    color: white;
+    color: white !important;
 }
 
 .category-card {
@@ -151,9 +218,13 @@ body {
     background-color: var(--dark1);
 }
 
+#review-username {
+    color: white;
+}
+
 .review-background {
     color: white;
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: rgb(255, 255, 255, 0.2);
 }
 
 .arrow {

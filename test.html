@@ -19,7 +19,92 @@
 </head>
 
 <body>
-  
+  <!-- Banner -->
+  <div class="banner mb-5">
+    <div class="container d-flex justify-content-center">
+      <form class="p-4" style="background-color: white; border-radius: 10px;">
+        <div class="row">
+          <div class="input-group input-group-sm keyword-search">
+            <span class="input-group-text" id="inputGroup-sizing-default">
+              <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/92A07E/search--v1.png" alt="search--v1"/>
+            </span>
+            <input type="search" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Activity Name, Location...">
+          </div>
+        </div>
+        <hr>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+          <div class="col-3">
+            <div class="p-2">
+              <label for="activity-date" class="form-label">Date</label>
+              <br>
+              <input class="form-control" type="date" id="activity-date" name="activity-date">
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="p-2">
+              <label for="location" class="form-label">Location</label>
+              <input type="text" class="form-control" id="location">
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="p-2">
+              <label for="activity-date" class="form-label">Budget</label>
+              <input type="text" class="form-control" id="location">
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="p-2">
+              <label for="budget" class="form-label">Category</label><br>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select One Category</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item active" href="#">Fitness & Exercise</a></li>
+                  <li><a class="dropdown-item" href="#">Nutrition & Diet</a></li>
+                  <li><a class="dropdown-item" href="#">Mental Health & Wellness</a></li>
+                  <li><a class="dropdown-item" href="#">Handcraft</a></li>
+                  <li><a class="dropdown-item" href="#">Friending</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- <div class="row text-center advance-search">
+    <div class="col-3">
+      <div class="p-3">
+        <label for="activity-date" class="form-label">Date</label>
+        <br>
+        <input class="form-control" type="date" id="activity-date" name="activity-date">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="p-3">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" class="form-control" id="location">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="p-3">
+        <label for="budget" class="form-label">Budget</label>
+        <input type="range" class="form-range" id="budget">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="p-3">
+        <label for="budget" class="form-label">Category</label>
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select One Category</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item active" href="#">Fitness & Exercise</a></li>
+          <li><a class="dropdown-item" href="#">Nutrition & Diet</a></li>
+          <li><a class="dropdown-item" href="#">Mental Health & Wellness</a></li>
+          <li><a class="dropdown-item" href="#">Handcraft</a></li>
+          <li><a class="dropdown-item" href="#">Friending</a></li>
+        </ul>
+      </div>
+    </div>
+  </div> -->
 </body>
 
 </html>
