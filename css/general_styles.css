@@ -16,7 +16,6 @@ body {
     font-size: small;
     font-weight: 500;
     font-family: "Poppins", sans-serif;
-    background-color: var(--mainbackground);
 }
 
 .btn {
@@ -95,16 +94,6 @@ body {
     background-position-y: -350px;
 }
 
-.search-bar {
-    position: relative;
-    top: 275px;
-    width: 70%;
-    height: 150px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 3px 3px 10px rgb(71, 89, 54, 0.1);
-}
-
 .keyword-search > span {
     background: none;
     border-style: none;
@@ -118,7 +107,7 @@ body {
     position: relative;
 }
 
-form {
+.search-bar {
     position: relative;
     top: 250px;
     background-color: white;
@@ -142,13 +131,13 @@ form {
 .dropdown-item, .dropdown-item:focus {
     font-size: small;
     color: black;
-    background-color: white;
+    background-color: white
+    ;
 }
 
 .active {
     width: 100%;
     color: var(--dark1);
-    background-color: var(--mainbackground) !important;
 }
 
 /* Category */
@@ -298,4 +287,31 @@ footer a {
     text-decoration: none;
     font-weight: 400;
     color: var(--darkgrey);
+}
+
+
+/*
+    all-activiy: filter
+*/
+.main-content {
+    margin-top: 100px;  /* avoid covered by header */
+}
+
+.filter-section {
+    border-radius: 10px;
+    border-style: solid;
+    border-width: thin;
+    border-color: var(--mainbackground);
+}
+
+.filter-title {
+    font-size: medium;
+    color: var(--dark1);
+}
+
+#filter-keyword {
+    font-size: small;
+    background: none;
+    border-style: solid;
+    border-width: 1px;
 }

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All Product</title>
+    <!-- Import Boostrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="css/general_styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top"> <!-- navbar-expand-lg: large window-show menu / bg-body-tertiary: appearance of the navbar / fixed-top: navbar will fix at top when scrolling -->
+        <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Sereno</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Sereno Home"> <!-- navbar-toggler hide navigation menu on smaller screens -->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav"> <!-- justify-content-end: align to right -->
+            <ul class="navbar-nav nav-underline"> <!-- nav-underline: hover on link show underline -->
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="all-activity.html">All Acivity</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="chat-with-mate.html">Chat with Mate</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+                <!-- d-flex class makes the div a flex container, and align-items-center vertically aligns its contents -->
+                <div class="d-inline-flex align-items-center">
+                <a class="nav-link" aria-current="page" href="cart.html">
+                    <img id="shopping-cart-icon" alt="shopping-cart" />
+                    <span>Cart</span>
+                </a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="account.html">Sign Up</a>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn btn-success" id="login">Login</button>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Body -->
+    <div class="container main-content">
+        <div class="row align-items-start">
+            <div class="col-3 filter">
+                <form>
+                    <div class="row p-3 m-4 filter-section">
+                        <label class="form-check-label fs-6 ps-0 mb-4 filter-title" for="filter-keyword">Search</label>
+                        <input class="form-control" type="text" placeholder="Search for activity" aria-label="keyword search" id="filter-keyword">
+                    </div>
+                    <div class="row p-3 m-4 filter-section">
+                        <label class="fs-6 ps-0 mb-4 filter-title">Type</label>
+                        <div class="form-check">
+                            <label class="form-check-label" for="filter-type">Fitness & Exercise</label>
+                            <input class="form-check-input" type="checkbox" value="" id="filter-type-exercise">
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="filter-type-diet">Nutrition & Diet</label>
+                            <input class="form-check-input" type="checkbox" value="" id="filter-type-diet">
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="filter-type-wellness">Mental Health & Wellness</label>
+                            <input class="form-check-input" type="checkbox" value="" id="filter-type-wellness">
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="filter-type-handcraft">Handcraft</label>
+                            <input class="form-check-input" type="checkbox" value="" id="filter-type-handcraft">
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="filter-type-friending">Friending</label>
+                            <input class="form-check-input" type="checkbox" value="" id="filter-type-friending">
+                        </div>
+                    </div>
+                    <div class="row p-3 m-4 filter-section">
+                        <label for="filter-budget" class="form-label fs-6 ps-0 mb-4 filter-title">Budget</label>
+                        <input type="range" class="form-range" min="0" max="200" id="filter-budget">
+                    </div>
+                </form>
+            </div>
+            <div class="col-9">
+                <div class="row m-4">
+                    <div class="col-3 d-flex align-items-center" id="result-total-record"></div>
+                    <div class="col-9" id="order">
+                        <div class="dropdown d-flex align-items-center justify-content-end">
+                            <label class="me-3">Sorted by</label>
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                            <ul class="dropdown-menu" id="dropdown-menu-sorted">
+                                <li><a class="dropdown-item" id="sorted-popularity">Most popular</a></li>
+                                <li><a class="dropdown-item" id="sorted-low-price">Price (low to high)</a></li>
+                                <li><a class="dropdown-item" id="sorted-high-price">Price (high to low)</a></li>
+                                <li><a class="dropdown-item" id="sorted-newest">Recently added</a></li>
+                            </ul>
+                          </div>
+                    </div>
+                </div>
+                <div class="row m-4" height="500px">
+                    <div class="container activity-list" id="activity-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- Import JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="js/search_result_interaction.js"></script>
+
+</html>
