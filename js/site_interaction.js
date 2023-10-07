@@ -1,8 +1,8 @@
 /* 
     Home: Search bar
     
-    - Before turn to all-activity.html, the search bar in index.html will collect user's search conditions.
-    - After collecting, it will list related activity in all-activity.html
+    - Before turn to explore.html, the search bar in index.html will collect user's search conditions.
+    - After collecting, it will list related activity in explore.html
 */
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
             dateTime:searchDateTime
         }
         const queryString = new URLSearchParams(queryParams).toString();
-        const urlWithParams = "all-activity.html"+"?"+queryString;
+        const urlWithParams = "explore.html"+"?"+queryString;
 
         // pass parameter via url
         document.location.href = urlWithParams;

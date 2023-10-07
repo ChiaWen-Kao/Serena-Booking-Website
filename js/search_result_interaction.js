@@ -1,5 +1,5 @@
 /* 
-    All Activity: display the result of activity
+    Explore: display the result of activity
     
     - Display the result of user's condition search from home page.
 */
@@ -8,12 +8,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const url = window.location.href;
     var urlParameters = {};
-    var urlString = url.split("?")[1].split("&");    // return list
-    for (let i = 0; i < urlString.length; i++) {
-        let a = urlString[i].split("=");
-        if (a[1] != "") {
-            urlParameters[a[0]] = a[1].replace("+", " ");
-        };
+
+    // check if user is from search bar of index.html, if not (i.e. from navbar), the url won't pass parameters,
+    // so it doesn't need to split the url
+    if (url.includes("?")) {
+        var urlString = url.split("?")[1].split("&");    // return list
+        
+        for (let i = 0; i < urlString.length; i++) {
+            let a = urlString[i].split("=");
+            if (a[1] != "") {
+                urlParameters[a[0]] = a[1].replace("+", " ");
+            };
+        }
     };
 
 
@@ -65,8 +71,11 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
 
             data.forEach(item => {
-                if (eval(conditionString)) {
-                    
+                console.log("here")
+
+                // if user enter this page from navbar, it will list all activity
+                if (!conditionString || eval(conditionString)) {
+
                     // create activity card
                     const activityResult = document.createElement("div");
                     activityResult.classList.add("card", "border-light", "p-1", "m-1");
@@ -126,3 +135,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });    
 });
 
+function displayActivityDetail() {
+    
+}
