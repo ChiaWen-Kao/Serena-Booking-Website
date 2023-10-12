@@ -1,0 +1,44 @@
+.flex-messenger {
+  display: grid;
+  grid-template-columns: 25% 55% 20%;
+}
+
+.messenger-list {
+  display: grid;
+  grid-template-rows: 1fr 0.5fr repeat(6, 1fr);
+  padding: 10px 2vw;
+  background-color: red;
+}
+
+.messenger-search {
+  position: relative;
+}
+
+.messenger-search i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  border-radius: 5px;
+  background: var(--mainbackground);
+}
+
+.messenger-search input {
+  margin: 0;
+  padding-left: 40px;
+}
+
+.messenger-list-card {
+  display: grid;
+  grid-template-columns: 20% auto 10%;
+}
+
+.messenger-chat {
+  padding: 10px 2vw;
+  background-color: blue;
+}
+
+.messenger-detail {
+  padding: 10px 2vw;
+  background-color: green;
+}
