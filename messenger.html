@@ -22,18 +22,18 @@
         <a href="index.html" class="nav-link brand" aria-label="Home Page" aria-current="page" tab-index="0">Sereno</a>
       </div>
       <div class="header-links">
-          <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
-            <i class="fa fa-bars"></i>
-          </a>
-          <a href="index.html" class="nav-link active" aria-label="Landing Page" tab-index="0">Home</a>
-          <a href="explore.html" class="nav-link" aria-label="Explore All Activity" tab-index="0">Explore</a>
-          <a href="chat-with-mate.html" class="nav-link" aria-label="Chat with Mate" tab-index="0">Chat with Mate</a>
-          <a href="blog.html" class="nav-link" aria-label="Blog" tab-index="0">Blog</a>
-          <a href="#" class="nav-link" aria-label="Shopping Cart" tab-index="0">Cart</a>
-          <a href="#" class="nav-link" aria-label="Sign Up" tab-index="0">Sign Up</a>
-          <a href="#" class="nav-link login" aria-label="Login" tab-index="0">
-            <button type="submit" class="dark-button">Login</button>
-          </a>
+        <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="index.html" class="nav-link active" aria-label="Landing Page" tab-index="0">Home</a>
+        <a href="explore.html" class="nav-link" aria-label="Explore All Activity" tab-index="0">Explore</a>
+        <a href="messenger.html" class="nav-link" aria-label="Chat with Mate" tab-index="0">Chat with Mate</a>
+        <a href="blog.html" class="nav-link" aria-label="Blog" tab-index="0">Blog</a>
+        <a href="#" class="nav-link" aria-label="Shopping Cart" tab-index="0">Cart</a>
+        <a href="#" class="nav-link" aria-label="Sign Up" tab-index="0">Sign Up</a>
+        <a href="#" class="nav-link login" aria-label="Login" tab-index="0">
+          <button type="submit" class="dark-button">Login</button>
+        </a>
       </div>
     </header>
 
@@ -41,26 +41,106 @@
       <div class="flex-messenger">
         <div class="messenger-list">
           <h2>Chat</h2>
-          <div class="messenger-search scroll">
+          <div class="messenger-search">
             <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #959595;"></i>
             <input type="search" placeholder="Search"></input>
           </div>
           <div class="flex-messenger-list">
-            <div class="messenger-list-card">
-              <div class="rounded">
-              <img class="rounded">
+            <div class="messenger-list-card" onclick="showMessengerDetail()">
+              <div class="rounded-image">
+                <img src="media/group_image/claymate-haven.jpg" alt="claymate-haven-group-chat" />
+              </div>
+              <div class="messenger-list-content">
+                <h5>Claymate Haven</h5>
+                <p>Hi! Nice to meet you! Welcome to Claymate Haven.</p>
+              </div>
+              <div class="notification"></div>
+            </div>
+            <div class="messenger-list-card" onclick="showMessengerDetail()">
+              <div class="rounded-image">
+                <img src="media/group_image/mud-pie-society.jpg" alt="clay" />
+              </div>
+              <div class="messenger-list-content">
+                <h5>Mud Pie Society</h5>
+                <p>Hi! Nice to meet you! Welcome to Claymate Haven.</p>
+              </div>
+              <div class="notification"></div>
+            </div>
+            <div class="messenger-list-card" onclick="showMessengerDetail()">
+              <div class="rounded-image">
+                <img src="media/group_image/gooey-genius-guide.jpg" alt="avatar" />
+              </div>
+              <div class="messenger-list-content">
+                <h5>Gooey Genius Guild</h5>
+                <p>Hi! Nice to meet you! Welcome to Claymate Haven.</p>
+              </div>
+              <div class="notification"></div>
+            </div>
+            <div class="messenger-list-card" onclick="showMessengerDetail()">
+              <div class="rounded-image">
+                <img src="media/group_image/lets-clay.jpg" alt="avatar" />
+              </div>
+              <div class="messenger-list-content">
+                <h5>Let's Clay</h5>
+                <p>Hi! Nice to meet you! Welcome to Claymate Haven.</p>
+              </div>
+              <div class="notification"></div>
+            </div>
+            <div class="messenger-list-card" onclick="showMessengerDetail()">
+              <div class="rounded-image">
+                <img src="media/group_image/lets-clay.jpg" alt="avatar" />
+              </div>
+              <div class="messenger-list-content">
+                <h5>Let's Clay</h5>
+                <p>Hi! Nice to meet you! Welcome to Claymate Haven.</p>
+              </div>
+              <div class="notification"></div>
+            </div>
+            <div class="messenger-list-card" onclick="showMessengerDetail()">
+              <div class="rounded-image">
+                <img src="media/group_image/lets-clay.jpg" alt="avatar" />
+              </div>
+              <div class="messenger-list-content">
+                <h5>Let's Clay</h5>
+                <p>Hi! Nice to meet you! Welcome to Claymate Haven.</p>
+              </div>
+              <div class="notification"></div>
+            </div>
+            <div class="messenger-list-card" onclick="showMessengerDetail()">
+              <div class="rounded-image">
+                <img src="media/group_image/lets-clay.jpg" alt="avatar" />
+              </div>
+              <div class="messenger-list-content">
+                <h5>Let's Clay</h5>
+                <p>Hi! Nice to meet you! Welcome to Claymate Haven.</p>
+              </div>
+              <div class="notification"></div>
             </div>
           </div>
         </div>
+        
         <div class="messenger-chat">
-
-        </div>
-        <div class="messenger-detail">
-
+          <div id="messenger-chat-header">
+            <h3>Claymate Haven</h3>
+            <i class="fa-solid fa-ellipsis" style="color: #475936;"></i>
+          </div>
+          <div id="messenger-chat-content"></div>
+          <div id="messenger-chat-input">
+            <i class="fa-regular fa-image fa-lg" style="color: #475936;"></i>
+            <i class="fa-regular fa-face-smile fa-lg" style="color: #475936;"></i>
+            <div class="message-input">
+              <input type="text" placeholder="Aa"></input>
+              <i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </div>
 </body>
+
+<!-- Import JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="js/messenger_interaction.js"></script>
 
 </html>

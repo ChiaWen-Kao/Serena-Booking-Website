@@ -107,12 +107,13 @@ hr {
   margin-bottom: 30px;
 }
 
-/* rounded image */
+/* border-radius image */
 .rounded {
   width: 100%;
   border-radius: 5px;
 }
 
+/* rounded image */
 .rounded-image {
   position: relative;
   width: 100%;    /* fit col-2 size */
@@ -159,7 +160,7 @@ hr {
   flex-shrink: 0;
   background-color: #f8f9fa;
   font-size: small;
-  padding: 4vh 6vw;
+  padding: 2vh 6vw;
 }
 
 .header-name {
@@ -279,7 +280,7 @@ hr {
     display: grid;    /* makes the component a grid component*/
     grid-template-columns: auto 1fr;    /* create first column as wide as content and second column  */
     align-items: center;    /* Vertically centre items */
-    padding: 4vh 6vw;
+    padding: 3vh 6vw;
     box-shadow: 3px 0px 10px rgb(71, 89, 54, 0.2);
   }
 

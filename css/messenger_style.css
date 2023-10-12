@@ -1,17 +1,27 @@
-.flex-messenger {
-  display: grid;
-  grid-template-columns: 25% 55% 20%;
+body {
+  background-color: white;
+  overflow: hidden;
 }
 
-.messenger-list {
+.flex-messenger {
   display: grid;
-  grid-template-rows: 1fr 0.5fr repeat(6, 1fr);
-  padding: 10px 2vw;
-  background-color: red;
+  grid-template-columns: 25% auto;
+}
+
+.messenger-list .fa-square-minus {
+  display: none;
 }
 
 .messenger-search {
   position: relative;
+}
+
+.flex-messenger-list {
+  margin-top: 20px;
+  height: calc(97vh - 210px);
+  overflow-y: auto;
+  text-align: justify;
+  padding-right: 10px;
 }
 
 .messenger-search i {
@@ -28,17 +38,181 @@
   padding-left: 40px;
 }
 
+.messenger-list {
+  display: grid;
+  grid-template-rows: 1fr 0.5fr auto;
+  padding: 10px 2vw;
+  border-right-style: solid;
+  border-width: 1px;
+  border-color: var(--mainbackground);
+}
+
 .messenger-list-card {
   display: grid;
   grid-template-columns: 20% auto 10%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.messenger-list-card:hover {
+  background-color: var(--mainbackground);
+}
+
+.messenger-list-content {
+  padding: 5px 0px 5px 8px;
+  width: 100%;
+}
+
+.messenger-list-content h5 {
+  margin-top: 2px;
+  margin-bottom: 6px;
+  color: var(--dark1);
+}
+
+.messenger-list-content p {
+  margin: 0;
+  font-size: smaller;
+  color: var(--darkgrey);
+  width: 200px;    /* ellipsis will not work when the width is % */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.notification {
+  width: 10px;
+  height: 10px;
+  background-color: var(--orange);
+  border-radius: 50%;
+  justify-self: start;
 }
 
 .messenger-chat {
-  padding: 10px 2vw;
-  background-color: blue;
+  display: grid;
+  grid-template-rows: 12% auto 10%;
+  border-right-style: solid;
+  border-width: 1px;
+  border-color: var(--mainbackground);
+  width: 100%;
+}
+
+#messenger-chat-header {
+  display: flex;
+  padding: 1vh 20px;
+  width: calc(100% - 40px);
+  color: var(--dark1);
+  box-shadow: 0px 2px 5px -2px rgb(71, 89, 54, 0.3);
+  justify-content: space-between;
+  align-items: center;
+}
+
+#messenger-chat-header h3 {
+  margin: 0;
+  flex: 1;  /* allow h3 to expand and take available space on the left */
+}
+
+#messenger-chat-header i {
+  align-self: flex-end;
+  align-self: center;
+}
+
+#messenger-chat-input {
+  display: grid;
+  grid-template-columns: 5% 5% 90%;
+  width: calc(100% - 20px);
+  justify-items : center;
+  align-items: center;
+  padding: 0 10px;
+  border-top: solid;
+  border-width: 1px;
+  border-color: var(--mainbackground);
+
+}
+
+.message-input {
+  position: relative;
+  width: 100%;
+}
+
+.message-input input {
+  margin: 0;
+}
+
+.message-input i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 6px;
+  padding: 7px;
+  background-color: var(--dark1);
+  border-radius: 50%;
 }
 
 .messenger-detail {
-  padding: 10px 2vw;
-  background-color: green;
+  padding: 50px;
+  margin : 0 auto
+}
+
+.messenger-detail h3{
+  color: var(--dark1);
+}
+
+.messenger-more-detail {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  align-items: center;
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+
+  /* messenger chat area (second part) */
+  .messenger-chat {
+    grid-template-rows: 8% auto 10%;
+  }
+
+  /* chat list */
+  .messenger-list {
+    display: grid;
+    grid-template-rows: 100%;
+    padding: 10px 2vw;
+    height: 100vh;
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: var(--mainbackground);
+    align-items: center;
+  }
+
+  .messenger-list h2 {
+    display: none;
+  }
+
+  .messenger-search {
+    display: none;
+  }
+
+  .flex-messenger-list {
+    padding: 0;
+    height: 100%;
+  }
+
+  .messenger-list-card {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .messenger-list-content {
+    display: none;
+  }
+
+  .notification {
+    display: none;
+  }
+
+  /* chat detail */
+  .messenger-detail {
+    display: none;
+  }
 }
