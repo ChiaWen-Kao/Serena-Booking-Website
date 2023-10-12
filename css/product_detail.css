@@ -3,6 +3,17 @@
     background-image: linear-gradient(rgba(0,0,0,0.5));
 }
 
+
+/* sale tag */
+.sale-tag {
+    color: white;
+    background-color: var(--orange);
+    
+}
+
+
+
+
 /* Activity Reviews */
 .activity-review > .container > h4 {
     color: var(--dark1);
