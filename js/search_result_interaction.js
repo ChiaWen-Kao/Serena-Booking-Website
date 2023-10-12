@@ -71,19 +71,17 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
 
             data.forEach(item => {
-                console.log("here")
 
                 // if user enter this page from navbar, it will list all activity
                 if (!conditionString || eval(conditionString)) {
 
                     // create activity card
                     const activityResult = document.createElement("div");
-                    activityResult.classList.add("card", "border-light", "p-1", "m-1");
-                    activityResult.style.width = "20rem";
+                    activityResult.setAttribute("id", '${item.id}');
+                    activityResult.classList.add("card", "border-light", "p-2", "m-2");
+                    activityResult.style.width = "17rem";
 
                     activityResult.innerHTML = `
-                        <button type="button" class="wishlist" aria-label="add-wishlist"></button>
-                        <span class="badge text-bg-warning text-center sale-label">Sale</span>
                         <img src="${item.photo}" class="img-fluid rounded card-img-top" alt="natural-meditation" />
                         <div class="card-body pb-2">
                             <h5 class="card-title">${item.name}</h5>
@@ -134,7 +132,3 @@ document.addEventListener("DOMContentLoaded", function() {
             totalRecordContainer.appendChild(totalRecord);
         });    
 });
-
-function displayActivityDetail() {
-    
-}
