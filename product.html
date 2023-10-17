@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sereno - Product</title>
+
+  <!-- Import CSS -->
+  <link rel="stylesheet" href="css/site_styles.css">
+  <link rel="stylesheet" href="css/general_styles.css">
+  <link rel="stylesheet" href="css/product_detail.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Icon -->
+  <script src="https://kit.fontawesome.com/4b9dff7943.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="flex-header-menu" id="navbar" aria-label="Main Menu">
+    <div class="header-name">
+      <a href="index.html" class="nav-link brand" aria-label="Home Page" aria-current="page" tab-index="0">Sereno</a>
+    </div>
+    <div class="header-links">
+      <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="index.html" class="nav-link active" aria-label="Landing Page" tab-index="0">Home</a>
+      <a href="explore.html" class="nav-link" aria-label="Explore All Activity" tab-index="0">Explore</a>
+      <a href="messenger.html" class="nav-link" aria-label="Chat with Mate" tab-index="0">Chat with Mate</a>
+      <a href="blog.html" class="nav-link" aria-label="Blog" tab-index="0">Blog</a>
+      <a href="#" class="nav-link" aria-label="Shopping Cart" tab-index="0">Cart</a>
+      <a href="#" class="nav-link" aria-label="Sign Up" tab-index="0">Sign Up</a>
+      <a href="#" class="nav-link login" aria-label="Login" tab-index="0">
+        <button type="submit" class="dark-button">Login</button>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <section class="flex-main-content main-content" aria-label="Main Content">
+
+    <!-- Carousel -->
+    <div class="grid-row px-5" id="carousel">
+      <div class="col-12 col-md-7 col-lg-8">
+        <img class="rounded ratio-image h-100" src="https://images.unsplash.com/photo-1673103622378-62e9a29f71f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2596&q=80" />
+      </div>
+      <div class="col-0 col-md-5 col-lg-4 h-between">
+        <div class="grid-row h-45 mt-0">
+          <div class="col-12">
+            <img class="rounded ratio-image h-100" src="https://images.unsplash.com/photo-1673103622378-62e9a29f71f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2596&q=80" />
+          </div>
+        </div>
+        <div class="grid-row h-45 mb-0">
+          <div class="col-12">
+            <img class="rounded ratio-image h-100" src="https://images.unsplash.com/photo-1673103622378-62e9a29f71f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2596&q=80" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Activity Detail -->
+    <div class="grid-row px-5" id="information">
+      <div class="col-12 col-md-8 col-lg-7">
+        <!-- Basic Information -->
+        <div class="grid-row m-0">
+          <div class="col-12 col-md-12 col-lg-12">
+            <h2 class="heading-1" id="activity-name">Clay Art Therapy Workshop: Discover Healing through Creativity</h2>
+          </div>
+        </div>
+        <div class="grid-row m-0 mb-5">
+          <div class="col-12 col-md-12 col-lg-4">
+            <i class="fa-solid fa-location-dot" style="color: #959595;"></i>
+            <span class="light-text" id="activity-location">South Bank, Australia</span>
+          </div>
+          <div class="col-12 col-md-12 col-lg-4">
+            <i class="fa-solid fa-calendar-days" style="color: #959595;"></i>
+            <span class="light-text" id="activity-date">2022/08/09 07:30</span>
+          </div>
+          <div class="col-12 col-md-12 col-lg-4">
+            <i class="fa-solid fa-clock" style="color: #959595;"></i>
+            <span class="light-text" id="activity-date">2 Hours</span>
+          </div>
+        </div>
+
+        <div class="grid-row m-0 d-inline v-center">
+          <div class="col-5 col-md-7 col-lg-7">
+            <span class="dark-button button-sm">Workshop</span>
+          </div>
+          <div class="col-7 col-md-5 col-lg-5 d-inline h-end v-end">
+            <p class="me-1 mb-1 heading-2">From</p>
+            <h1 class="m-0" style="font-size: xx-large !important; color: var(--orange) !important;">AU $50</h1>
+          </div>
+        </div>
+        
+        <hr class="mt-5 mb-5">
+
+        <div class="grid-row m-0 mt-5">
+          <div class="col-12 col-md-12 col-lg-12">
+            <h3 class="heading-1">About This Event</h3>
+            <p>Unleash your creativity and embark on a journey of self-discovery with our Clay Art Therapy Workshop. This unique and immersive experience combines the therapeutic benefits of art with the tactile joy of working with clay. Guided by experienced art therapists, this workshop is designed to provide a safe and nurturing space for participants to explore their emotions, reduce stress, and foster a sense of accomplishment.</p>
+          </div>
+        </div>
+
+        <div class="grid-row m-0 mt-5">
+          <div class="col-12 col-md-12 col-lg-12">
+            <h3 class="heading-1">What You'll Create</h3>
+            <p class="heading-3">In this workshop, you'll have the chance to craft a variety of clay artworks</p>
+            <ol class="p-1" type="1">
+              <li>Sculptures: Learn the art of sculpting and create your own unique clay sculptures. Express your creativity by shaping and molding the clay into three-dimensional forms.</li>
+              <li>All Materials Included: We provide all the necessary clay, sculpting tools, and equipment. Just bring your creativity!</li>
+              <li>Take-Home Art: At the end of the workshop, you'll have your own clay artworks to take home and showcase your artistic talent.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="grid-row m-0 mt-5">
+          <div class="col-12 col-md-12 col-lg-12">
+            <h3 class="heading-1">Activity Highlight</h3>
+          </div>
+        </div>
+        <div class="grid-row m-0 mt-5">
+          <div class="col-12 col-md-12 col-lg-12">
+            <p class="heading-3 m-0">Mindful Clay Sculpting</p>
+          </div>
+          <div class="col-12 col-md-12 col-lg-12 hightlight-activity-image" style="background-image: url('https://images.unsplash.com/photo-1519233181562-35b0b8bb2b1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80');">
+          </div>
+          <div class="col-12 col-md-12 col-lg-12 h-center">
+            <p class="light-text m-0">▲Guided session on basic clay sculpting techniques.</p>
+          </div>
+        </div>
+        <div class="grid-row m-0 mt-5">
+          <div class="col-12 col-md-12 col-lg-12">
+            <p class="heading-3 m-0">Emotional Expression Through Art</p>
+          </div>
+          <div class="col-12 col-md-12 col-lg-12 hightlight-activity-image" style="background-image: url('https://images.unsplash.com/photo-1632819506620-cc0f984af43a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');">
+          </div>
+          <div class="col-12 col-md-12 col-lg-12 h-center">
+            <p class="light-text m-0">▲Guided session on basic clay sculpting techniques.</p>
+          </div>
+        </div>
+        <hr class="mt-8 mb-8">
+      </div>
+    </div>
+
+    <div class="grid-row px-5" id="information">
+      <!-- Review Title -->
+      <div class="col-12 col-md-12 col-lg-12">
+        <div class="grid-row m-0">
+          <div class="col-12 col-md-12 col-lg-12">
+            <h2 class="heading-1" id="activity-name">Reviews</h2>
+          </div>
+        </div>
+        <div class="grid-row m-0">
+          <div class="col-12 col-md-3 col-lg-3 d-inline v-center">
+            <span class="m-0 me-1" style="font-size: xx-large !important; font-weight: 700 !important; color: var(--orange) !important;">4.6</span>
+            <span style="color: var(--lightgrey)">/</span>
+            <span class="ms-1 me-1" style="font-size: smaller; color: var(--lightgrey);">5</span>
+            <i class="fa-solid fa-star" style="color: #f5a400;"></i>
+            <i class="fa-solid fa-star" style="color: #f5a400;"></i>
+            <i class="fa-solid fa-star" style="color: #f5a400;"></i>
+            <i class="fa-solid fa-star" style="color: #f5a400;"></i>
+            <i class="fa-solid fa-star" style="color: var(--lightgrey);"></i>
+            <span class="ms-1" style="font-size: smaller; color: var(--lightgrey);">(146)</span>
+          </div>
+          <div class="col-12 col-md-9 col-lg-9 d-inline v-center h-start more-review">
+            <span class="me-1" style="color: var(--lightgrey);">More Reviews</span>
+            <i class="fa-solid fa-angle-right" style="color: var(--lightgrey);"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Review Cards -->
+    <div class="grid-row px-5">
+      <div class="col-12 col-md-4 col-lg-4 card">
+        <div class="grid-row m-0">
+          <div class="col-2 col-md-4 col-lg-2 rounded-image p-0">
+            <div class="rounded-image" width="100px !important">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1961&q=80" alt="avatar" />
+            </div>
+          </div>
+          <div class="col-6 col-md-8 col-lg-6">
+            <div class="col-12 col-md-12 col-lg-12">
+              <span class="card-title">Sarah M.</span>
+            </div>
+            <div class="col-12 col-md-12 col-lg-12">
+              <i class="fa-solid fa-star" style="color: #f5a400;"></i>
+              <i class="fa-solid fa-star" style="color: #f5a400;"></i>
+              <i class="fa-solid fa-star" style="color: #f5a400;"></i>
+              <i class="fa-solid fa-star" style="color: #f5a400;"></i>
+              <i class="fa-solid fa-star" style="color: #f5a400;"></i>
+            </div>
+          </div>
+          <div class="col-4 col-md-12 col-lg-4 d-inline review-date">
+            <span class="lighter-text font-sm">11/06/2023</span>
+          </div>
+        </div>
+        <div class="grid-row m-0 mt-2">
+          <div class="col-12 col-md-12 col-lg-12">
+            <p class="card-content">
+              Attending the Clay Art Therapy Workshop was an incredible experience. I had never worked with
+              clay before, but under the guidance of the art therapists, I found myself immersed in a world of creativity.
+            </p>
+          </div>
+        </div>
+        <div class="grid-row m-0 mt-2">
+          <div class="col-6 col-md-6 col-lg-3 m-0 comment-images">
+            <img width="100%" class="rounded" src="https://images.unsplash.com/photo-1590605103416-230704277b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 m-0 comment-images">
+            <img width="100%" class="rounded" src="https://images.unsplash.com/photo-1590605103416-230704277b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+          </div>
+          <div class="col-lg-3 m-0 display-image">
+            <img width="100%" class="rounded" src="https://images.unsplash.com/photo-1590605103416-230704277b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+          </div>
+          <div class="col-lg-3 m-0 display-image">
+            <img width="100%" class="rounded" src="https://images.unsplash.com/photo-1590605103416-230704277b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 col-lg-4 card">
+        <div class="grid-row m-0">
+          <div class="col-2 col-md-4 col-lg-2 rounded-image p-0">
+            <div class="rounded-image" width="100px !important">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1961&q=80" alt="avatar" />
+            </div>
+          </div>
+          <div class="col-6 col-md-8 col-lg-6">
+            <div class="col-12 col-md-12 col-lg-12">
+              <span class="card-title">Sarah M.</span>
+            </div>
+            <div class="col-12 col-md-12 col-lg-12">
+              <i class="fa-solid fa-star" style="color: #f5a400;"></i>
+              <i class="fa-solid fa-star" style="color: #f5a400;"></i>
+              <i class="fa-solid fa-star" style="color: #f5a400;"></i>
+              <i class="fa-solid fa-star" style="color: #f5a400;"></i>
+              <i class="fa-solid fa-star" style="color: #f5a400;"></i>
+            </div>
+          </div>
+          <div class="col-4 col-md-12 col-lg-4 d-inline review-date">
+            <span class="lighter-text font-sm">11/06/2023</span>
+          </div>
+        </div>
+        <div class="grid-row m-0 mt-2">
+          <div class="col-12 col-md-12 col-lg-12">
+            <p class="card-content">
+              Attending the Clay Art Therapy Workshop was an incredible experience. I had never worked with
+              clay before, but under the guidance of the art therapists, I found myself immersed in a world of creativity.
+            </p>
+          </div>
+        </div>
+        <div class="grid-row m-0 mt-2">
+          <div class="col-6 col-md-6 col-lg-3 m-0 comment-images">
+            <img width="100%" class="rounded" src="https://images.unsplash.com/photo-1590605103416-230704277b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 m-0 comment-images">
+            <img width="100%" class="rounded" src="https://images.unsplash.com/photo-1590605103416-230704277b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+          </div>
+          <div class="col-lg-3 m-0 display-image">
+            <img width="100%" class="rounded" src="https://images.unsplash.com/photo-1590605103416-230704277b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+          </div>
+          <div class="col-lg-3 m-0 display-image">
+            <img width="100%" class="rounded" src="https://images.unsplash.com/photo-1590605103416-230704277b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 col-lg-4 card">
+        <div class="grid-row m-0">
+          <div class="col-2 col-md-4 col-lg-2 rounded-image p-0">
+            <div class="rounded-image" width="100px !important">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1961&q=80" alt="avatar" />
+            </div>
+          </div>
+          <div class="col-6 col-md-8 col-lg-6">
+            <div class="col-12 col-md-12 col-lg-12">
+              <span class="card-title">Sarah M.</span>
+            </div>
+            <div class="col-12 col-md-12 col-lg-12">
+              <i class="fa-solid fa-star" style="color: #f5a400;"></i>
+              <i class="fa-solid fa-star" style="color: #f5a400;"></i>
+              <i class="fa-solid fa-star" style="color: #f5a400;"></i>
+              <i class="fa-solid fa-star" style="color: #f5a400;"></i>
+              <i class="fa-solid fa-star" style="color: #f5a400;"></i>
+            </div>
+          </div>
+          <div class="col-4 col-md-12 col-lg-4 d-inline review-date">
+            <span class="lighter-text font-sm">11/06/2023</span>
+          </div>
+        </div>
+        <div class="grid-row m-0 mt-2">
+          <div class="col-12 col-md-12 col-lg-12">
+            <p class="card-content">
+              Attending the Clay Art Therapy Workshop was an incredible experience. I had never worked with
+              clay before, but under the guidance of the art therapists, I found myself immersed in a world of creativity.
+            </p>
+          </div>
+        </div>
+        <div class="grid-row m-0 mt-2">
+          <div class="col-6 col-md-6 col-lg-3 m-0 comment-images">
+            <img width="100%" class="rounded" src="https://images.unsplash.com/photo-1590605103416-230704277b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 m-0 comment-images">
+            <img width="100%" class="rounded" src="https://images.unsplash.com/photo-1590605103416-230704277b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+          </div>
+          <div class="col-lg-3 m-0 display-image">
+            <img width="100%" class="rounded" src="https://images.unsplash.com/photo-1590605103416-230704277b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+          </div>
+          <div class="col-lg-3 m-0 display-image">
+            <img width="100%" class="rounded" src="https://images.unsplash.com/photo-1590605103416-230704277b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <!-- Connect with Others -->
+    <div class="mt-9 mb-9 py-3" style="height: auto; background-color: var(--dark1); display: flex; flex-direction: column;">
+      <div class="grid-row m-0">
+        <div class="col-12 col-md-12 col-lg-12 m-2 px-5">
+          <h2 class="heading-1" style="color: white;">Connect with Others</h2>
+        </div>
+      </div>
+      <div class="grid-row px-5" style="grid-gap: 40px;">
+        <div class="col-6 col-md-4 col-lg-3 card" style="background-color: white; border-style: none;">
+          <div class="grid-row m-0">
+            <div class="col-12 col-md-12 col-lg-12 rounded-image" style="width: 50%; padding-top: 50%; margin-left: 25%;">
+              <img width="50%" src="https://images.unsplash.com/photo-1640623725972-a757223d6833?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1973&q=80">
+            </div>
+            <div class="col-12 col-md-12 col-lg-12 text-center">
+              <h3>Claymates Haven</h3>
+              <p>Get your hands dirty with our clay-loving crew. Sculpt, chat, repeat!</p>
+            </div>
+            <div class="col-12 col-md-12 col-lg-12 d-inline h-center">
+              <button type="button" class="dark-button">Join Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 card" style="background-color: white; border-style: none;">
+          <div class="grid-row m-0">
+            <div class="col-12 col-md-12 col-lg-12 rounded-image" style="width: 50%; padding-top: 50%; margin-left: 25%;">
+              <img width="50%" src="https://images.unsplash.com/photo-1499976311613-703e57dd2e53?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80">
+            </div>
+            <div class="col-12 col-md-12 col-lg-12 text-center">
+              <h3>Mud Pie Society</h3>
+              <p>Where messy fun and clay creations collide in an artsy extravaganza.</p>
+            </div>
+            <div class="col-12 col-md-12 col-lg-12 d-inline h-center">
+              <button type="button" class="dark-button">Join Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 card" style="background-color: white; border-style: none;">
+          <div class="grid-row m-0">
+            <div class="col-12 col-md-12 col-lg-12 rounded-image" style="width: 50%; padding-top: 50%; margin-left: 25%;">
+              <img width="50%" src="https://images.unsplash.com/photo-1657395330773-51e704ced2ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">
+            </div>
+            <div class="col-12 col-md-12 col-lg-12 text-center">
+              <h3>Gooey Genius Guild</h3>
+              <p>Embrace the squishy side of life - clay, laughter, and endless inspiration.</p>
+            </div>
+            <div class="col-12 col-md-12 col-lg-12 d-inline h-center">
+              <a href="messenger.html"><button type="button" class="dark-button">Join Now</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 card" style="background-color: white; border-style: none;">
+          <div class="grid-row m-0">
+            <div class="col-12 col-md-12 col-lg-12 rounded-image" style="width: 50%; padding-top: 50%; margin-left: 25%;">
+              <img width="50%" src="https://images.unsplash.com/photo-1673339066658-1b36cea3054c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80">
+            </div>
+            <div class="col-12 col-md-12 col-lg-12 text-center">
+              <h3>Let's Clay</h3>
+              <p>Come and join us to enjoy clay, meet new friends, and having fun with us.</p>
+            </div>
+            <div class="col-12 col-md-12 col-lg-12 d-inline h-center">
+              <button type="button" class="dark-button">Join Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="flex-footer">
+      <div class="padding-content-with-bg">
+        <div class="footer-menu">
+          <ul>
+            <h4>Explore</h4>
+            <li>Home</li>
+            <li>Activity</li>
+            <li>Review</li>
+            <li>Blog</li>
+          </ul>
+          <ul>
+            <h4>About Us</h4>
+            <li>Contact Us</li>
+            <li>FAQs</li>
+          </ul>
+          <ul>
+            <h4>Further Information</h4>
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
+          </ul>
+          <ul>
+            <h4>Subscribe to Our Newsletter</h4>
+            <p>We will never miss our new release experiences, discount etc. Our newsletter is once a week, every Friday.</p>
+            <div class="subscribe-form">
+              <input type="email" placeholder="user@yoursite.com"></input>
+              <button type="button"class="dark-button">Subscribe</button>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">DECO7140 Introduction of Web Design | Chia-Wen Kao</div>
+  </footer>
+</body>
+
+  <!-- Import JS -->
+  <!-- <script src="js/activity_detail_interaction.js"></script> -->
+
+</html>

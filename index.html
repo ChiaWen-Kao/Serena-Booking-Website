@@ -1,15 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sereno</title>
-  <!-- Import Boostrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
   <!-- Import CSS -->
+  <link rel="stylesheet" href="css/site_styles.css" >
   <link rel="stylesheet" href="css/general_styles.css">
+  <link rel="stylesheet" href="css/index_styles.css">
+
+  <!-- Import Icon -->
+  <script src="https://kit.fontawesome.com/4b9dff7943.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,172 +22,209 @@
 </head>
 
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top"> <!-- navbar-expand-lg: large window-show menu / bg-body-tertiary: appearance of the navbar / fixed-top: navbar will fix at top when scrolling -->
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Sereno</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Sereno Home"> <!-- navbar-toggler hide navigation menu on smaller screens -->
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav"> <!-- justify-content-end: align to right -->
-        <ul class="navbar-nav nav-underline"> <!-- nav-underline: hover on link show underline -->
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="all-activity.html">All Acivity</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="chat-with-mate.html">Chat with Mate</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="blog.html">Blog</a>
-          </li>
-          <li class="nav-item">
-            <!-- d-flex class makes the div a flex container, and align-items-center vertically aligns its contents -->
-            <div class="d-inline-flex align-items-center">
-              <a class="nav-link" aria-current="page" href="cart.html">
-                <img id="shopping-cart-icon" alt="shopping-cart" />
-                <span>Cart</span>
-              </a>
+  <div class="flex-container">
+    <header class="flex-header-menu" id="navbar" aria-label="Main Menu">
+      <div class="header-name">
+        <a href="index.html" class="nav-link brand" aria-label="Home Page" aria-current="page" tab-index="0">Sereno</a>
+      </div>
+      <div class="header-links">
+        <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="index.html" class="nav-link active" aria-label="Landing Page" tab-index="0">Home</a>
+        <a href="explore.html" class="nav-link" aria-label="Explore All Activity" tab-index="0">Explore</a>
+        <a href="messenger.html" class="nav-link" aria-label="Chat with Mate" tab-index="0">Chat with Mate</a>
+        <a href="blog.html" class="nav-link" aria-label="Blog" tab-index="0">Blog</a>
+        <a href="#" class="nav-link" aria-label="Shopping Cart" tab-index="0">Cart</a>
+        <a href="#" class="nav-link" aria-label="Sign Up" tab-index="0">Sign Up</a>
+        <a href="#" class="nav-link login" aria-label="Login" tab-index="0">
+          <button type="submit" class="dark-button">Login</button>
+        </a>
+      </div>
+    </header>
+
+    <!-- banner with search bar -->
+    <div class="flex-banner">
+      <div class="search-bar">
+        <form id="activity-search">
+          <!-- keyword -->
+          <div class="keyword-search">
+            <label for="keyword" style="display: none;">Keyword Search</label>
+            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/92A07E/search--v1.png" alt="search"/>
+            <input type="search" id="keyword" name="keyword" aria-label="Activity Search" placeholder="activity Name, Location...">
+            <button type="button" class="dark-button" id="searchbar-submit">Search</button>
+          </div>
+          <hr>
+          <!-- advanced search -->
+          <div class="advanced-search">
+            <!-- date -->
+            <div class="date-search">
+              <label for="activity-date">Date</label>
+              <br>
+              <input type="datetime-local" id="activity-date" name="activity-date">
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="account.html">Sign Up</a>
-          </li>
-          <li class="nav-item">
-            <button type="button" class="btn btn-success" id="login">Login</button>
-          </li>
-        </ul>
+            <!-- location -->
+            <div class="location-search">
+              <label for="activity-location">Location</label>
+              <input type="text" id="activity-location" name="activity-location">
+            </div>
+            <!-- budget -->
+            <div class="budget-search">
+              <label for="activity-budget">Budget</label>
+              <input type="text" id="activity-budget" name="activity-budget">
+            </div>
+            <!-- category -->
+            <div class="category-search">
+              <label for="activity-category">Category</label>
+              <br>
+              <button type="button" class="dark-button" id="category" onclick="categorySearchDropdownMenu()" aria-expanded="false">Select category</button>
+              <div class="dropdown-content" id="activity-category" name="activity-category">
+                <a>Fitness & Exercise</a>
+                <a>Nutrition & Diet</a>
+                <a>Mental Health & Wellness</a>
+                <a>Handcraft</a>
+                <a>Friending</a>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
-  </nav>
 
-  <!-- Test -->
-  <div style="height: 200px;"></div>
-
-  <!-- Review -->
-  <div class="background-color"> <!-- for review section background-color -->
-    <section class="review">
-      <div class="container pt-5 pb-5">
-        <div class="row">
-          <div class="col-sm-6">
-            <h4 class="fw-bold mb-5">Discover What Our Participants Say</h4>
+    <section class="flex-main-content main-content" aria-label="Main Content">
+      <div class="padding-content-without-bg">
+        <!-- Category -->
+        <h2>Category</h2>
+        <div class="flex-category">
+          <!-- Fitness and Exercise -->
+          <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1579454566790-f9e5697ddf36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2684&q=80');">
+            <h3>
+              Fitness<br>
+              &<br>
+              Exercise
+            </h3>
+            <a href="#" class="light-button">Explore</a>
           </div>
-          <div class="col-sm-6 fs-6">
-            <p>At Balance Bliss Hub, we're all about enhancing your well-being through unique local experiences. But don't just take our word for it – hear from fellow users who have transformed their lives through our wellness activities.</p>
-            <p>See what our participants said:</p>
+          <!-- Nutrition and Diet -->
+          <div class="category-card" style="background-image: url('https://images.pexels.com/photos/4253320/pexels-photo-4253320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+            <h3>
+              Nutrition<br>
+              &<br>
+              Diet
+            </h3>
+            <a href="#" class="light-button">Explore</a>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-10"></div>
-          <div class="col-sm-1 text-end">
-            <button type="button" class="btn arrow" style="transform: rotate(180deg);" aria-label="Next"></button>
+          <!-- Mental Health and Wellness-->
+          <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1566333449824-f58e920a21b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80');">
+            <h3>
+              Mental Health<br>
+              &<br>
+              Wellness
+            </h3>
+            <a href="#" class="light-button">Explore</a>
           </div>
-          <div class="col-sm-1">
-            <button type="button" class="btn arrow" aria-label="Back"></button>
+          <!-- Handcraft -->
+          <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1572725335307-3303414b3360?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80');">
+            <h3>
+              DIY<br>
+              &<br>
+              Handcraft
+              
+            </h3>
+            <a href="#" class="light-button">Explore</a>
           </div>
-        </div>
-        <div class="row mt-5" id="review-card">
-          <div class="card review-background" style="width: 25rem;">
-            <div class="card-body p-4">
-              <div class="row">
-                <div class="col-sm-2 ps-0">
-                  <div class="rounded-image">
-                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1961&q=80" alt="avatar1" />
-                  </div>
-                </div>
-                <div class="col-sm-10 d-flex align-items-center ps-0">
-                  <h5 class="card-title mb-0">Rachel S.</h5>
-                </div>
-              </div>
-              <div class="row mt-4">
-                <div class="col-sm-1 ps-0">
-                  <img src="https://img.icons8.com/ios-glyphs/60/FFFFFF/quote-right.png" style="width: 100%; transform: rotate(180deg);" alt="quote-left" />
-                </div>
-                <div class="col-sm-10">
-                  <p class="card-text">Meditation classes through Balance Bliss Hub transformed my life, offering inner peace and a sense of community. It's wellness with a local touch, connecting neighbors and friends.</p>
-                </div>
-                <div class="col-sm-1 d-flex align-items-end pe-0">
-                  <img src="https://img.icons8.com/ios-glyphs/60/FFFFFF/quote-right.png" style="width: 100%;" alt="quote-right" />
-                </div>
-              </div>
-            </div>
+          <!-- Friending -->
+          <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1569937755776-cf7f47af4b73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80');">
+            <h3>
+              Social<br>
+              &<br>
+              Friending
+            </h3>
+            <a href="#" class="light-button">Explore</a>
           </div>
         </div>
       </div>
+
+      <!-- Popular Activity -->
+      <div class="padding-content-without-bg">
+        <h2>Popular Activity</h2>
+        <div class="flex-popular-activity">
+          <button class="btn" id="popular-activity-prev" aria-label="Previous Page"><i class="fa-solid fa-circle-chevron-left fa-2xl" style="color: #475936;"></i></button>
+          <div class="flex-popular-activity-cards"></div>
+          <button class="btn" id="popular-activity-next" aria-label="Next Page"><i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: #475936;"></i></button>
+        </div>
+      </div>
+
+      <!-- Comment -->
+      <div class="flex-comment">
+        <div class="padding-content-with-bg">
+          <div class="row-content-desc">
+            <h2>Discover What Our Participants Say</h2>
+            <p>
+              At Balance Bliss Hub, we're all about enhancing your well-being through unique local experiences. 
+              But don't just take our word for it – hear from fellow users who have transformed their lives through our wellness activities.
+              See what our participants said:
+            </p>
+          </div>
+          <div class="row-content-arrow">
+            <span></span>
+            <button class="btn" id="comment-prev" aria-label="Previous Page"><i class="fa-solid fa-circle-chevron-left fa-2xl" style="color: white;"></i></button>
+            <button class="btn" id="comment-next" aria-label="Next Page"><i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: white;"></i></button>
+          </div>
+          <div class="flex-comment-cards"></div>
+        </div>
+      </div>
+
+      <!-- Nearby Activity -->
+      <div class="padding-content-without-bg">
+        <h2>See Today's Activity Around You</h2>
+        <div class="flex-nearby-activity">
+          <div id="map"></div>
+          <div id="flex-nearby-activity-cards"></div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <div class="flex-footer">
+          <div class="padding-content-with-bg">
+            <div class="footer-menu">
+              <ul>
+                <h4>Explore</h4>
+                <li>Home</li>
+                <li>Activity</li>
+                <li>Review</li>
+                <li>Blog</li>
+              </ul>
+              <ul>
+                <h4>About Us</h4>
+                <li>Contact Us</li>
+                <li>FAQs</li>
+              </ul>
+              <ul>
+                <h4>Further Information</h4>
+                <li>Privacy Policy</li>
+                <li>Terms of Service</li>
+              </ul>
+              <ul>
+                <h4>Subscribe to Our Newsletter</h4>
+                <p>We will never miss our new release experiences, discount etc. Our newsletter is once a week, every Friday.</p>
+                <div class="subscribe-form">
+                  <input type="email" placeholder="user@yoursite.com"></input>
+                  <button class="dark-button">Subscribe</button>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">DECO7140 Introduction of Web Design | Chia-Wen Kao</div>
+      </footer>
     </section>
   </div>
-
-  <!-- Footer -->
-  <footer class="text-center text-lg-start mt-5"> <!-- text-lg-start: large window-text left alignment / mt-5: 5 margin-top -->
-    <!-- Section: links -->
-    <section class="footer">
-      <div class="container text-center text-md-start p-5"> <!-- p-5: 5 padding-top -->
-        <!-- Grid row -->
-        <div class="row">
-          <!-- Grid column -->
-          <div class="col-md-1 col-lg-1 col-xl-1 mx-auto"> <!-- mx-auto: horizontal margin to div -->
-            <!-- Links -->
-            <h6 class="fw-bold mt-4 mb-4">Explore</h6> <!-- fw-bold: bold font-wight -->
-            <p> <!-- make sure the space between each link -->
-              <a href="index.html" class="text-reset">Home</a> <!-- text-reset: removes any custom text color -->
-            </p>
-            <p>
-              <a href="all-activity.html" class="text-reset">Activity</a>
-            </p>
-            <p>
-              <a href="blog.html" class="text-reset">Blog</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-          <!-- Grid column -->
-          <div class="col-md-1 col-lg-1 col-xl-1 mx-auto">
-            <!-- Links -->
-            <h6 class="fw-bold mt-4 mb-4">About Us</h6>
-            <p>
-              <a href="index.html" class="text-reset">Contact Us</a>
-            </p>
-            <p>
-              <a href="all-activity.html" class="text-reset">FAQs</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-          <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
-            <!-- Links -->
-            <h6 class="fw-bold mt-4 mb-4">Further Information</h6>
-            <p>
-              <a href="index.html" class="text-reset">Privacy Policy</a>
-            </p>
-            <p>
-              <a href="all-activity.html" class="text-reset">Terms of Service</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-          <!-- Grid column -->
-          <div class="col-md-5 col-lg-5 col-xl-5 mx-auto">
-            <!-- Links -->
-            <h6 class="fw-bold mt-4 mb-4">Subscribe to Our Newsletter</h6>
-            <p>You will never miss our new release experiences, discount, etc. Our newsletter is once a week, every Friday.</p>
-            <div class="input-group mb-3">
-              <input type="email" class="form-control input-newsletter" placeholder="user@yoursite.com" aria-label="Newsletter Subscribe" aria-describedby="button-newsletter">
-              <button class="btn btn-outline-secondary" type="button" id="button-newsletter">Subscribe</button>
-            </div>
-          </div>
-          <!-- Grid column -->
-        </div>
-      </div>
-    </section>
-    <!-- Section: links -->
-    <!-- Copyright -->
-    <section class="copyright">
-      <div class="text-center p-3"> <!-- p-3: 3 padding -->
-        DECO7140 Introduction of Web Design | Chia-Wen Kao
-      </div>
-    </section>
-    <!-- Copyright -->
-  </footer>
 </body>
+
+<!-- Import JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="js/site_interactions.js"></script>
 
 </html>

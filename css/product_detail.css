@@ -1,0 +1,89 @@
+/* Mobile */
+#carousel {
+    height: 300px;
+}
+
+#carousel .col-0 {
+    display: none;
+}
+
+.display-image {
+  display: none;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* display the highlight of activity image with specific height */
+.hightlight-activity-image {
+  border-radius: 10px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Tablet and phones in landscape */
+@media only screen and (min-width: 601px) and (max-width: 1194px) {
+
+  /* navbar */
+  #carousel .col-0
+
+  .flex-header-menu a:not(.brand) {
+      display: none;
+  }
+
+  .flex-header-menu a.icon {
+      float: right;
+      display: block;
+  }
+
+  .flex-container {
+      flex-direction: column;    /* redifine the ordering */
+  }
+
+  #carousel .col-0 {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .more-review {
+    justify-content: end !important;
+  }
+
+  .hidden {
+    display: inline;
+  }
+}
+
+/* Desktop: These rules are not only applied if the screen is wider than 1194px*/
+@media only screen and (min-width: 1195px) {
+  
+  /* carousel */
+  #carousel {
+    height: 416px;
+  }
+
+  #carousel .col-0 {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .more-review {
+    justify-content: end !important;
+  }
+
+  .review-date {
+    justify-content: flex-end !important;
+  }
+
+  .display-image {
+    display: inline;
+  }
+
+  .hidden {
+    display: block;
+  }
+}

@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sereno - Product</title>
+  <!-- Import Boostrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Import CSS -->
+  <link rel="stylesheet" href="css/general_styles.css">
+  <link rel="stylesheet" href="css/product_detail.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- Google Map -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIPd3N7noO3Mv0KFGY40KC2pvWX04oXjE&callback=initMap&v=weekly"
+    defer></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <!-- navbar-expand-lg: large window-show menu / bg-body-tertiary: appearance of the navbar / fixed-top: navbar will fix at top when scrolling -->
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Sereno</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Sereno Home">
+        <!-- navbar-toggler hide navigation menu on smaller screens -->
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <!-- justify-content-end: align to right -->
+        <ul class="navbar-nav nav-underline"> <!-- nav-underline: hover on link show underline -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="explore.html">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="messenger.html">Chat with Mate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <!-- d-flex class makes the div a flex container, and align-items-center vertically aligns its contents -->
+            <div class="d-inline-flex align-items-center">
+              <a class="nav-link" aria-current="page" href="cart.html">
+                <img id="shopping-cart-icon" alt="shopping-cart" />
+                <span>Cart</span>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="account.html">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-success" id="login">Login</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Test -->
+  <div style="height: 200px;"></div>
+
+  <!-- Breadcrumb -->
+  <section class="current-location">
+    <div class="container">
+      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Library</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Carousel -->
+  <section class="activity-carousel mb-5">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-sm-8" id="activity-main-photo">
+        </div>
+        <div class="col-sm-4">
+          <div class="row">
+            <div>
+              <img width="100%" class="rounded" src="https://images.unsplash.com/photo-1673103622378-62e9a29f71f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2596&q=80" />
+            </div>
+          </div>
+          <div class="row pt-2">
+            <div>
+              <img width="100%" class="rounded mask-image" src="https://images.unsplash.com/photo-1590605105526-5c08f63f89aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activity information -->
+  <div class="container mb-5">
+    <button class="btn btn-primary btn-sm mb-3 fw-bold sale-tag">Sale</button>
+    <h3 class="fw-bold mb-4" style="color: var(--dark1);" id="activity-title"></h3>
+    
+    <hr>
+  </div>
+
+  <!-- Activity Detail -->
+  <section class="about mb-5">
+    <div class="container">
+      <h4 class="fw-bold mb-4" style="color: var(--dark1);">About This Event</h4>
+      <div class="row" id="activity-description"></div>
+    </div>
+  </section>
+
+  <section class="result mb-5">
+    <div class="container">
+      <h4 class="fw-bold mb-4" style="color: var(--dark1);">What You'll Create</h4>
+      <div class="row">
+        <p>In this workshop, you'll have the chance to craft a variety of clay artworks</p>
+        <ol class="ms-3" type="1">
+          <li>Sculptures: Learn the art of sculpting and create your own unique clay sculptures. Express your creativity by shaping and molding the clay into three-dimensional forms.</li>
+          <li>All Materials Included: We provide all the necessary clay, sculpting tools, and equipment. Just bring your creativity!</li>
+          <li>Take-Home Art: At the end of the workshop, you'll have your own clay artworks to take home and showcase your artistic talent.</li>
+        </ol>  
+      </div>
+    </div>
+  </section>
+
+  <section class="highlight mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h4 class="fw-bold mb-5" style="color: var(--dark1);">Workshop Highlight</h4>
+          <div class="row">
+            <h6 class="fw-bold mb-4">Mindful Clay Sculpting</h6>
+            <p style="color: var(--darkgrey);">Guided session on basic clay sculpting techniques.</p>
+            <img width="100%" class="mb-5" src="https://images.unsplash.com/photo-1519233181562-35b0b8bb2b1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" />
+          </div>
+          <div class="row">
+            <h6 class="fw-bold mb-4">Mindful Clay Sculpting</h6>
+            <p style="color: var(--darkgrey);">Guided session on basic clay sculpting techniques.</p>
+            <img width="100%" class="rounded" src="https://images.unsplash.com/photo-1519233181562-35b0b8bb2b1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activity Reviews -->
+  <section class="activity-review mb-5">
+    <div class="container">
+      <h4 class="fw-bold mb-5">Reviews</h4>
+      <div class="row mb-3">
+        <div class="col-1 pe-0">
+          <span class="fs-2 fw-bold" style="color: var(--orange);">4.6</span>
+          <span> / 5</span>
+        </div>
+        <div class="col-4 d-flex align-items-center ps-0">
+          <img class="me-1" height="40%"
+            src="https://img.icons8.com/external-kmg-design-flat-kmg-design/32/000000/external-star-user-interface-kmg-design-flat-kmg-design.png"
+            alt="rate" />
+          <img class="me-1" height="40%"
+            src="https://img.icons8.com/external-kmg-design-flat-kmg-design/32/000000/external-star-user-interface-kmg-design-flat-kmg-design.png"
+            alt="rate" />
+          <img class="me-1" height="40%"
+            src="https://img.icons8.com/external-kmg-design-flat-kmg-design/32/000000/external-star-user-interface-kmg-design-flat-kmg-design.png"
+            alt="rate" />
+          <img class="me-1" height="40%"
+            src="https://img.icons8.com/external-kmg-design-flat-kmg-design/32/000000/external-star-user-interface-kmg-design-flat-kmg-design.png"
+            alt="rate" />
+          <img class="me-1" height="40%"
+            src="https://img.icons8.com/external-kmg-design-flat-kmg-design/32/000000/external-star-user-interface-kmg-design-flat-kmg-design.png"
+            alt="rate" />
+          <span>(146)</span>
+        </div>
+        <div class="col-7 d-flex justify-content-end">
+          <a href="#" style="color: var(--darkgrey); text-decoration: none;">
+            <span>More reviews</span>
+            <img height="40%" src="https://img.icons8.com/ios-filled/50/959595/forward--v1.png" alt="forward--v1" />
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card me-3" style="width: 30rem;">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-2 d-flex align-items-center">
+                <div class="review-rounded-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1961&q=80"
+                    alt="avatar1" />
+                </div>
+              </div>
+              <div class="col-5 align-items-center">
+                <p class="m-0">Sarah M.</p>
+                <img height="30%"
+                  src="https://img.icons8.com/external-kmg-design-flat-kmg-design/32/000000/external-star-user-interface-kmg-design-flat-kmg-design.png"
+                  alt="rate" />
+              </div>
+              <div class="col-5 d-flex align-items-center justify-content-end" style="color: var(--darkgrey);">
+                28/08/2023</div>
+              <p class="card-text mt-3">Attending the Clay Art Therapy Workshop was an incredible experience. I had
+                never worked with clay before, but under the guidance of the art therapists, I found myself immersed in
+                a world of creativity.</p>
+            </div>
+            <div class="row justify-content-center">
+              <div class="row w-100 g-1">
+                <div class="col-3">
+                  <div class="p-2">
+                    <img class="rounded" width="100%"
+                      src="https://images.unsplash.com/photo-1590605103416-230704277b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" />
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="p-2">
+                    <img class="rounded" width="100%"
+                      src="https://images.unsplash.com/photo-1590605103416-230704277b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" />
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="p-2">
+                    <img class="rounded" width="100%"
+                      src="https://images.unsplash.com/photo-1590605103416-230704277b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" />
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="p-2">
+                    <img class="rounded" width="100%"
+                      src="https://images.unsplash.com/photo-1590605103416-230704277b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="width: 30rem;">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-2 d-flex align-items-center">
+                <div class="review-rounded-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1961&q=80"
+                    alt="avatar1" />
+                </div>
+              </div>
+              <div class="col-5 align-items-center">
+                <p class="m-0">Sarah M.</p>
+                <img height="30%"
+                  src="https://img.icons8.com/external-kmg-design-flat-kmg-design/32/000000/external-star-user-interface-kmg-design-flat-kmg-design.png"
+                  alt="rate" />
+              </div>
+              <div class="col-5 d-flex align-items-center justify-content-end" style="color: var(--darkgrey);">
+                28/08/2023</div>
+              <p class="card-text mt-3">Attending the Clay Art Therapy Workshop was an incredible experience. I had
+                never worked with clay before, but under the guidance of the art therapists, I found myself immersed
+                in a world of creativity.</p>
+            </div>
+            <div class="row justify-content-center">
+              <div class="row w-100 g-1">
+                <div class="col-3">
+                  <div class="p-2">
+                    <img class="rounded" width="100%"
+                      src="https://images.unsplash.com/photo-1590605103416-230704277b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" />
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="p-2">
+                    <img class="rounded" width="100%"
+                      src="https://images.unsplash.com/photo-1590605103416-230704277b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" />
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="p-2">
+                    <img class="rounded" width="100%"
+                      src="https://images.unsplash.com/photo-1590605103416-230704277b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" />
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="p-2">
+                    <img class="rounded" width="100%"
+                      src="https://images.unsplash.com/photo-1590605103416-230704277b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Chat with Others -->
+  <section class="chat-with-other p-5">
+    <div class="container">
+      <h4 class="fw-bold mb-5">Connect with Others</h4>
+      <div class="row">
+        <div class="card p-3 m-3" style="width: 15rem;">
+          <div class="rounded-image">
+            <img
+              src="https://images.unsplash.com/photo-1590422886897-7dd50e58577e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+              class="card-img-top" alt="...">
+          </div>
+          <div class="card-body text-center rounded">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Join Now</a>
+          </div>
+        </div>
+        <div class="card p-3 m-3" style="width: 15rem;">
+          <div class="rounded-image">
+            <img
+              src="https://images.unsplash.com/photo-1590422886897-7dd50e58577e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+              class="card-img-top" alt="...">
+          </div>
+          <div class="card-body text-center rounded">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Join Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start mt-5">
+    <!-- text-lg-start: large window-text left alignment / mt-5: 5 margin-top -->
+    <!-- Section: links -->
+    <section class="footer">
+      <div class="container text-center text-md-start p-5"> <!-- p-5: 5 padding-top -->
+        <!-- Grid row -->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-1 col-lg-1 col-xl-1 mx-auto"> <!-- mx-auto: horizontal margin to div -->
+            <!-- Links -->
+            <h6 class="fw-bold mt-4 mb-4">Explore</h6> <!-- fw-bold: bold font-wight -->
+            <p> <!-- make sure the space between each link -->
+              <a href="index.html" class="text-reset">Home</a> <!-- text-reset: removes any custom text color -->
+            </p>
+            <p>
+              <a href="explore.html" class="text-reset">Activity</a>
+            </p>
+            <p>
+              <a href="blog.html" class="text-reset">Blog</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+          <!-- Grid column -->
+          <div class="col-md-1 col-lg-1 col-xl-1 mx-auto">
+            <!-- Links -->
+            <h6 class="fw-bold mt-4 mb-4">About Us</h6>
+            <p>
+              <a href="index.html" class="text-reset">Contact Us</a>
+            </p>
+            <p>
+              <a href="explore.html" class="text-reset">FAQs</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+            <!-- Links -->
+            <h6 class="fw-bold mt-4 mb-4">Further Information</h6>
+            <p>
+              <a href="index.html" class="text-reset">Privacy Policy</a>
+            </p>
+            <p>
+              <a href="explore.html" class="text-reset">Terms of Service</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+          <!-- Grid column -->
+          <div class="col-md-5 col-lg-5 col-xl-5 mx-auto">
+            <!-- Links -->
+            <h6 class="fw-bold mt-4 mb-4">Subscribe to Our Newsletter</h6>
+            <p>You will never miss our new release experiences, discount, etc. Our newsletter is once a week, every
+              Friday.</p>
+            <div class="input-group mb-3">
+              <input type="email" class="form-control input-newsletter" placeholder="user@yoursite.com"
+                aria-label="Newsletter Subscribe" aria-describedby="button-newsletter">
+              <button class="btn btn-outline-secondary" type="button" id="button-newsletter">Subscribe</button>
+            </div>
+          </div>
+          <!-- Grid column -->
+        </div>
+      </div>
+    </section>
+    <!-- Section: links -->
+    <!-- Copyright -->
+    <section class="copyright">
+      <div class="text-center p-3"> <!-- p-3: 3 padding -->
+        DECO7140 Introduction of Web Design | Chia-Wen Kao
+      </div>
+    </section>
+    <!-- Copyright -->
+  </footer>
+</body>
+  <!-- Import JS -->
+  <script src="js/activity_detail_interaction.js"></script>
+</html>

@@ -1,0 +1,65 @@
+/* Carousel */
+.mask-image {
+    background-image: linear-gradient(rgba(0,0,0,0.5));
+}
+
+
+/* sale tag */
+.sale-tag {
+    color: white;
+    background-color: var(--orange);
+    
+}
+
+
+/* Activity Reviews */
+.activity-review > .container > h4 {
+    color: var(--dark1);
+}
+
+.review-rounded-image {
+    position: relative;
+    width: 100%;    /* fit col-2 size */
+    padding-top: 100%;    /* height of the circular image is set to be the same as its width, so top padding of the container will be equal to 100% of its width */        
+                          /* maintain a 1:1 aspect ratio (height = width) */
+    overflow: hidden;    /* hide any overflow from the image */
+}
+
+.review-rounded-image img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;    /* maintain aspect ratio and cover the circular container */
+}
+
+/* Chat with Others */
+.chat-with-other {
+    background-color: var(--dark1) !important;
+}
+
+.chat-with-other > .container > h4 {
+    color: white;
+}
+
+.rounded-image {
+    position: relative;
+    display: flex;
+    justify-content: center;    /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    width: 100%;
+    overflow: hidden;    /* hide any overflow from the image */
+}
+
+.rounded-image img {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    object-fit: cover;    /* maintain aspect ratio and cover the circular container */
+}
+
+.card-title {
+    margin-top: -30px;
+}
