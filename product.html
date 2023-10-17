@@ -50,25 +50,22 @@
     <div class="grid-row px-5 navigation">
       <div class="col-12 col-md-12 col-lg-12 font-sm py-3">
         <span class="light-text">All Activities  >  Stress Relieve  >  Handcraft  >  </span>
-        <span style="color: var(--dark1);">Clay Art Therapy Workshop: Discover Healing through Creativity</span>
+        <span style="color: var(--dark1); font-weight: 600;" id="navigation-activity-title"></span>
       </div>
     </div>
 
 
     <!-- Carousel -->
     <div class="grid-row px-5" id="carousel">
-      <div class="col-12 col-md-7 col-lg-8">
-        <img class="rounded ratio-image h-100" src="https://images.unsplash.com/photo-1673103622378-62e9a29f71f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2596&q=80" />
+      <div class="col-12 col-md-7 col-lg-8 activity-main-photo">
       </div>
       <div class="col-0 col-md-5 col-lg-4 h-between">
         <div class="grid-row h-45 mt-0">
-          <div class="col-12">
-            <img class="rounded ratio-image h-100" src="https://images.unsplash.com/photo-1673103622378-62e9a29f71f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2596&q=80" />
+          <div class="col-12 activity-main-photo">
           </div>
         </div>
         <div class="grid-row h-45 mb-0">
-          <div class="col-12">
-            <img class="rounded ratio-image h-100" src="https://images.unsplash.com/photo-1673103622378-62e9a29f71f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2596&q=80" />
+          <div class="col-12 activity-main-photo">
           </div>
         </div>
       </div>
@@ -80,27 +77,29 @@
         <!-- Basic Information -->
         <div class="grid-row m-0">
           <div class="col-12 col-md-12 col-lg-12">
-            <h2 class="heading-1" id="activity-name">Clay Art Therapy Workshop: Discover Healing through Creativity</h2>
+            <h2 class="heading-1" id="activity-title"></h2>
           </div>
         </div>
         <div class="grid-row m-0 mb-5">
           <div class="col-12 col-md-12 col-lg-4">
             <i class="fa-solid fa-location-dot" style="color: #959595;"></i>
-            <span class="light-text" id="activity-location">South Bank, Australia</span>
+            <span class="light-text" id="activity-location"></span>
           </div>
           <div class="col-12 col-md-12 col-lg-4">
             <i class="fa-solid fa-calendar-days" style="color: #959595;"></i>
-            <span class="light-text" id="activity-date">2022/08/09 07:30</span>
+            <span class="light-text" id="activity-date"></span>
           </div>
           <div class="col-12 col-md-12 col-lg-4">
             <i class="fa-solid fa-clock" style="color: #959595;"></i>
-            <span class="light-text" id="activity-date">2 Hours</span>
+            <span class="light-text">2 Hours</span>
+
           </div>
         </div>
 
         <div class="grid-row m-0 d-inline v-center">
           <div class="col-5 col-md-7 col-lg-7">
-            <span class="dark-button button-sm">Workshop</span>
+            <!-- <span class="dark-button button-sm">Workshop</span> -->
+            <span class="dark-button button-sm" id="activity-type"></span>
           </div>
           <div class="col-7 col-md-5 col-lg-5 d-inline h-end v-end">
             <p class="me-1 mb-1 heading-2">From</p>
@@ -113,7 +112,7 @@
         <div class="grid-row m-0 mt-5">
           <div class="col-12 col-md-12 col-lg-12">
             <h3 class="heading-1">About This Event</h3>
-            <p>Unleash your creativity and embark on a journey of self-discovery with our Clay Art Therapy Workshop. This unique and immersive experience combines the therapeutic benefits of art with the tactile joy of working with clay. Guided by experienced art therapists, this workshop is designed to provide a safe and nurturing space for participants to explore their emotions, reduce stress, and foster a sense of accomplishment.</p>
+            <p id="activity-description"></p>
           </div>
         </div>
 

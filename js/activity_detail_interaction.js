@@ -39,45 +39,78 @@ document.addEventListener("DOMContentLoaded", () => {
     var resultCount = 0
 
     // create element in these containers
-    const activityImageContainer = document.getElementById("activity-main-photo");    // carousel image
-    const activityDescriptionContainer = document.getElementById("activity-description");    // about this event
-    const activityTitleContainer = document.getElementById("activity-title");    // activity title
-
+    
     fetch(urlWithParams, requestOptions)
-        .then(response => response.json())
-        .then(data => {
+    .then(response => response.json())
+    .then(data => {
+        
+        data.forEach(item => {
 
-            data.forEach(item => {
+            // if user enter this page from navbar, it will list all activity
+            if (item.id == urlParameters.activityId) {
 
-                // if user enter this page from navbar, it will list all activity
-                if (item.id === urlParameters.activityId) {
+                // carsousel image
+                const activityImageContainer = document.querySelectorAll(".activity-main-photo");    // multiple div need to show the same photo, pack all element as list
+                const activityImage = document.createElement("img");
+                activityImage.classList.add("rounded", "ratio-image", "h-100");
+                activityImage.setAttribute("src", item.photo);
 
-                    // carsousel image
-                    const activityImage = document.createElement("img");
-                    activityImage.classList.add("rounded");
-                    activityImage.setAttribute("src", item.photo);
-                    activityImage.style.width = "100%";
-                    activityImage.style.height = "auto";
+                activityImageContainer.forEach(container => {
+                    container.appendChild(activityImage.cloneNode(true));    // copy its attribute to different elements
+                });
+                
+                // activity title
+                const navigationActivityTitleContainer = document.getElementById("navigation-activity-title")
+                const activityTitleContainer = document.getElementById("activity-title");
+                activityTitleContainer.innerHTML = `
+                    ${item.name}
+                `;
+                navigationActivityTitleContainer.innerHTML = `
+                    ${item.name}
+                `;
                     
-                    activityImageContainer.appendChild(activityImage);
-
-                    // activity title
-                    const activityTitle = document.createElement("activity-title");
-                    activityTitle.innerHTML = `
-                        ${item.name}
-                    `;
-                    activityTitleContainer.appendChild(activityTitle);
-
-
-                    // about this event
-                    const activityDescription = document.createElement("p");
-                    activityDescription.innerHTML = `
-                        ${item.description}
-                    `;
-
-                    activityDescriptionContainer.appendChild(activityDescription);
-
-                };
-            });
+                // activity location
+                const activityLocationContainer = document.getElementById("activity-location");
+                activityLocationContainer.innerHTML = `
+                    ${item.name}
+                `;
+                
+                // activity date
+                const activityDateContainer = document.getElementById("activity-date");
+                convertDateTimeFormat(item.date_time)
+                activityDateContainer.innerHTML = `
+                    ${convertDateTimeFormat(item.date_time)}
+                `;
+                    
+                // activity type
+                const activityTypeContainer = document.getElementById("activity-type");
+                activityTypeContainer.innerHTML = `
+                    ${item.event_type}
+                `;
+                
+                // about this event
+                const activityDescriptionContainer = document.getElementById("activity-description");
+                activityDescriptionContainer.innerHTML = `
+                    ${item.description}
+                `;
+            };
         });
+    });
 });
+
+/*
+  Date Time Format
+*/
+function convertDateTimeFormat(dateTime) {
+    let objectDate = new Date(dateTime);
+  
+    // JavaScript returns a zero-based index for the month, meaning January is 0
+    // add 1 to the month value, and both the day and hour values have two digits
+    let day = objectDate.getDate().toString().padStart(2, '0');    
+    let month = (objectDate.getMonth() + 1).toString().padStart(2, '0');
+    let year = objectDate.getFullYear();
+    let hour = objectDate.getHours().toString().padStart(2, '0');
+    let minute = objectDate.getMinutes().toString().padStart(2, '0');
+  
+    return `${year}-${month}-${day} ${hour}:${minute}`;
+  }
