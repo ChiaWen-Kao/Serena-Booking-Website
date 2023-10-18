@@ -62,37 +62,25 @@ document.addEventListener("DOMContentLoaded", () => {
                 // activity title
                 const navigationActivityTitleContainer = document.getElementById("navigation-activity-title")
                 const activityTitleContainer = document.getElementById("activity-title");
-                activityTitleContainer.innerHTML = `
-                    ${item.name}
-                `;
-                navigationActivityTitleContainer.innerHTML = `
-                    ${item.name}
-                `;
+                activityTitleContainer.innerHTML = item.name
+
+                navigationActivityTitleContainer.innerHTML = item.name;
                     
                 // activity location
                 const activityLocationContainer = document.getElementById("activity-location");
-                activityLocationContainer.innerHTML = `
-                    ${item.name}
-                `;
+                activityLocationContainer.innerHTML = item.location
                 
                 // activity date
                 const activityDateContainer = document.getElementById("activity-date");
-                convertDateTimeFormat(item.date_time)
-                activityDateContainer.innerHTML = `
-                    ${convertDateTimeFormat(item.date_time)}
-                `;
+                activityDateContainer.innerHTML = convertDateTimeFormat(item.date_time);
                     
                 // activity type
                 const activityTypeContainer = document.getElementById("activity-type");
-                activityTypeContainer.innerHTML = `
-                    ${item.event_type}
-                `;
+                activityTypeContainer.innerHTML = item.event_type;
                 
                 // about this event
                 const activityDescriptionContainer = document.getElementById("activity-description");
-                activityDescriptionContainer.innerHTML = `
-                    ${item.description}
-                `;
+                activityDescriptionContainer.innerHTML = item.description;
             };
         });
     });
@@ -101,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /*
   Date Time Format
 */
-function convertDateTimeFormat(dateTime) {
+convertDateTimeFormat = (dateTime) => {
     let objectDate = new Date(dateTime);
   
     // JavaScript returns a zero-based index for the month, meaning January is 0
@@ -113,4 +101,18 @@ function convertDateTimeFormat(dateTime) {
     let minute = objectDate.getMinutes().toString().padStart(2, '0');
   
     return `${year}-${month}-${day} ${hour}:${minute}`;
-  }
+}
+
+/*
+  w3school: Create A Responsive Topnav
+  https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
+*/
+
+hamburgerMenu = () => {
+    var x = document.getElementById("navbar");
+    if (x.className === "flex-header-menu") {
+      x.className += " responsive";
+    } else {
+      x.className = "flex-header-menu";
+    }
+}

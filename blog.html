@@ -167,74 +167,44 @@
   </section>
 
   <!-- Footer -->
-  <footer class="text-center text-lg-start mt-5"> <!-- text-lg-start: large window-text left alignment / mt-5: 5 margin-top -->
-    <!-- Section: links -->
-    <section class="footer">
-      <div class="container text-center text-md-start p-5"> <!-- p-5: 5 padding-top -->
-        <!-- Grid row -->
-        <div class="row">
-          <!-- Grid column -->
-          <div class="col-md-1 col-lg-1 col-xl-1 mx-auto"> <!-- mx-auto: horizontal margin to div -->
-            <!-- Links -->
-            <h6 class="fw-bold mt-4 mb-4">Explore</h6> <!-- fw-bold: bold font-wight -->
-            <p> <!-- make sure the space between each link -->
-              <a href="index.html" class="text-reset">Home</a> <!-- text-reset: removes any custom text color -->
-            </p>
-            <p>
-              <a href="explore.html" class="text-reset">Activity</a>
-            </p>
-            <p>
-              <a href="blog.html" class="text-reset">Blog</a>
-            </p>
+  <div class="mt-9 py-3 flex-footer" style="height: auto; background-color: var(--dark1); display: flex; flex-direction: column;">
+    <div class="grid-row px-5">
+      <div class="col-12 col-md-3 col-lg-2 footer-menu">
+        <ul style="color: white;">
+          <h4>Explore</h4>
+          <li>Home</li>
+          <li>Activity</li>
+          <li>Review</li>
+          <li>Blog</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3 col-lg-2 footer-menu">
+        <ul style="color: white;">
+          <h4>About Us</h4>
+          <li>Contact Us</li>
+          <li>FAQs</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3 col-lg-3 footer-menu">
+        <ul style="color: white;">
+          <h4>Further Information</h4>
+          <li>Privacy Policy</li>
+          <li>Terms of Service</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-12 col-lg-5 newsletter">
+        <div style="color: white;">
+          <h4>Subscribe to Our Newsletter</h4>
+          <p>We will never miss our new release experiences, discount etc. Our newsletter is once a week, every Friday.</p>
+          <div class="subscribe-form">
+            <input type="email" placeholder="user@yoursite.com"></input>
+            <button type="button"class="dark-button">Subscribe</button>
           </div>
-          <!-- Grid column -->
-          <!-- Grid column -->
-          <div class="col-md-1 col-lg-1 col-xl-1 mx-auto">
-            <!-- Links -->
-            <h6 class="fw-bold mt-4 mb-4">About Us</h6>
-            <p>
-              <a href="index.html" class="text-reset">Contact Us</a>
-            </p>
-            <p>
-              <a href="explore.html" class="text-reset">FAQs</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-          <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
-            <!-- Links -->
-            <h6 class="fw-bold mt-4 mb-4">Further Information</h6>
-            <p>
-              <a href="index.html" class="text-reset">Privacy Policy</a>
-            </p>
-            <p>
-              <a href="explore.html" class="text-reset">Terms of Service</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-          <!-- Grid column -->
-          <div class="col-md-5 col-lg-5 col-xl-5 mx-auto">
-            <!-- Links -->
-            <h6 class="fw-bold mt-4 mb-4">Subscribe to Our Newsletter</h6>
-            <p>You will never miss our new release experiences, discount, etc. Our newsletter is once a week, every Friday.</p>
-            <div class="input-group mb-3">
-              <input type="email" class="form-control input-newsletter" placeholder="user@yoursite.com" aria-label="Newsletter Subscribe" aria-describedby="button-newsletter">
-              <button class="btn btn-outline-secondary" type="button" id="button-newsletter">Subscribe</button>
-            </div>
-          </div>
-          <!-- Grid column -->
         </div>
       </div>
-    </section>
-    <!-- Section: links -->
-    <!-- Copyright -->
-    <section class="copyright">
-      <div class="text-center p-3"> <!-- p-3: 3 padding -->
-        DECO7140 Introduction of Web Design | Chia-Wen Kao
-      </div>
-    </section>
-    <!-- Copyright -->
-  </footer>
+    </div>
+  </div>
+  <div class="copyright">DECO7140 Introduction of Web Design | Chia-Wen Kao</div>
 </body>
 
 </html>

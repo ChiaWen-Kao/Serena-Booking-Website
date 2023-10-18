@@ -23,23 +23,31 @@
 
 <body>
   <div class="flex-container">
-    <header class="flex-header-menu" id="navbar" aria-label="Main Menu">
-      <div class="header-name">
-        <a href="index.html" class="nav-link brand" aria-label="Home Page" aria-current="page" tab-index="0">Sereno</a>
-      </div>
-      <div class="header-links">
-        <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
-          <i class="fa fa-bars"></i>
-        </a>
-        <a href="index.html" class="nav-link active" aria-label="Landing Page" tab-index="0">Home</a>
-        <a href="explore.html" class="nav-link" aria-label="Explore All Activity" tab-index="0">Explore</a>
-        <a href="messenger.html" class="nav-link" aria-label="Chat with Mate" tab-index="0">Chat with Mate</a>
-        <a href="blog.html" class="nav-link" aria-label="Blog" tab-index="0">Blog</a>
-        <a href="#" class="nav-link" aria-label="Shopping Cart" tab-index="0">Cart</a>
-        <a href="#" class="nav-link" aria-label="Sign Up" tab-index="0">Sign Up</a>
-        <a href="#" class="nav-link login" aria-label="Login" tab-index="0">
-          <button type="submit" class="dark-button">Login</button>
-        </a>
+    <header class="flex-header-menu d-inline" id="navbar" aria-label="Main Menu">
+      <div class="grid-row">
+        <div class="col-4 col-md-4 col-lg-4">
+          <div class="header-name">
+            <a href="index.html" class="nav-link brand" aria-label="Home Page" aria-current="page" tab-index="0">Sereno</a>
+          </div>
+        </div>
+        <div class="col-8 col-md-8 col-lg-8">
+          <div class="header-links">
+            <a href="javascript:void(0);" class="icon" width="fit-content" onclick="hamburgerMenu()">
+              <i class="fa fa-bars"></i>
+            </a>
+            <div class="nav-links">   <!-- test -->
+              <a href="index.html" class="nav-link active" aria-label="Landing Page" tab-index="0">Home</a>
+              <a href="explore.html" class="nav-link" aria-label="Explore All Activity" tab-index="0">Explore</a>
+              <a href="messenger.html" class="nav-link" aria-label="Chat with Mate" tab-index="0">Chat with Mate</a>
+              <a href="blog.html" class="nav-link" aria-label="Blog" tab-index="0">Blog</a>
+              <a href="#" class="nav-link" aria-label="Shopping Cart" tab-index="0">Cart</a>
+              <a href="#" class="nav-link" aria-label="Sign Up" tab-index="0">Sign Up</a>
+              <a href="#" class="nav-link login" aria-label="Login" tab-index="0">
+                <button type="submit" class="dark-button">Login</button>
+              </a>
+            </div>    <!-- test -->
+          </div>
+        </div>
       </div>
     </header>
 
