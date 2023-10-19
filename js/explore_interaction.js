@@ -57,16 +57,18 @@ document.addEventListener("DOMContentLoaded", function() {
       for (let i = 0; i < urlString.length; i++) {
           let a = urlString[i].split("=");
           if (a[1] != "") {
-              urlParameters[a[0]] = a[1].replace("+", " ");
+              urlParameters[a[0]] = a[1].replace("+", " ").replace("%2C+", ", ");
           };
       }
   };
 
+  console.log(urlParameters)
 
   // create condition for API
   var conditionString = "";
   for (let i = 0; i < Object.keys(urlParameters).length; i++) {
       if (Object.keys(urlParameters)[i] == "location") {
+          console.log(urlParameters.location)
           conditionString += "item.location == urlParameters.location";
       } else if (Object.keys(urlParameters)[i] == "category") {
           conditionString += "item.event_type == urlParameters.category";
@@ -78,8 +80,6 @@ document.addEventListener("DOMContentLoaded", function() {
           conditionString += "&&";
       }
   };
-
-  console.log(conditionString);
 
   // get activity from API
   const activityResultBaseURL = "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community_events/";
@@ -111,7 +111,6 @@ document.addEventListener("DOMContentLoaded", function() {
       .then(data => {
 
           data.forEach(item => {
-
               // if user enter this page from navbar, it will list all activity
               if (!conditionString || eval(conditionString)) {
 
