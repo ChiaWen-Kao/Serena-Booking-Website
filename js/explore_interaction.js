@@ -174,3 +174,21 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+function linkToProductDetailPage(activityId) {
+  /*
+      Parameters:
+          1. activityId (int): activity id on api.
+  */
+
+  // construct a parameter string
+  var queryParams = {
+      activityId: activityId
+  };
+  const queryString = new URLSearchParams(queryParams).toString();
+  const urlWithParams = "product.html"+"?"+queryString;
+  
+  // pass parameter via url
+  document.location.href = urlWithParams;
+}
+
+

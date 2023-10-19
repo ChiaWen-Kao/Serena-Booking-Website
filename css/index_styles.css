@@ -101,6 +101,7 @@
   display: block;
 }
 
+
 /* main content */
 .flex-main-content {
   flex: 1;    /* Component to grow and fill remaining space */
@@ -181,7 +182,7 @@
 
 .row-content-icon-text {
   display: grid;
-  grid-template-columns: 7% auto;
+  grid-template-columns: 10% auto;
   align-items: center;
   color: var(--darkgrey);
   margin-bottom: 5px;
@@ -233,7 +234,7 @@
 .review-card {
   padding: 20px;
   width: 400px;
-  height: 200px;
+  height: 180px;
   color: white;
   background-color: rgb(255, 255, 255, 0.3);
   border-radius: 10px;
@@ -252,9 +253,11 @@
 
 .review-card-content div {
   padding: 10px;
-  height: 100%;
   overflow: hidden;
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
 .review-card-content > :last-child {

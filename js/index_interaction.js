@@ -107,8 +107,6 @@ $(document).ready(function () {
     .then(response => response.json())
     .then(data => {
 
-      console.log(data)
-
       // display cards for popular activity
       function displayPage(page) {
         popularActivityCardContainer.innerHTML = ``;    // clear cards in container
@@ -123,7 +121,7 @@ $(document).ready(function () {
           popularActivityCard.setAttribute("id", cardData.id);
 
           popularActivityCard.innerHTML = `
-            <img class="activity-card-image" src="${cardData.photo}" alt="clay-workshop" />
+            <img class="activity-card-image ratio-image" src="${cardData.photo}" alt="clay-workshop" />
             <div class="activity-card-content">
               <h4>${cardData.name}</h4>
               <div class="row-content-icon-text">
@@ -134,7 +132,7 @@ $(document).ready(function () {
                   <i class="fa-regular fa-clock fa-sm" style="color: #92a07e;"></i>
                   <span>${convertedDateTime}</span>
               </div>
-              <span class="badge">${cardData.event_type}</span>
+              <span class="dark-button button-sm">${cardData.event_type}</span>
               <div class="row-content-price">
                 <i class="fa-solid fa-star" style="color: #f5a400;"></i>
                 <span style="font-size: small;">4.8(100)</span>
@@ -154,7 +152,7 @@ $(document).ready(function () {
           // display today's nearby activity
           if ((convertDateTimeFormat(cardData.date_time) >= getCurrentTime()) && (cardData.location == "St. Lucia, Australia")) {
             const nearbyActivityCard = document.createElement("div");
-            nearbyActivityCard.classList.add("nearby-activity-card");
+            nearbyActivityCard.classList.add("nearby-activity-card", "mb-2");
             nearbyActivityCard.setAttribute("id", cardData.id);
             nearbyActivityCard.innerHTML = `
               <img class="rounded" src="${cardData.photo}" alt="${cardData.name}" />
@@ -177,6 +175,7 @@ $(document).ready(function () {
 
       // initialize pagination
       function initPagination() {
+        
         const totalCards = data.length;
         const totalPages = Math.ceil(totalCards / cardPerPage);
 
@@ -187,6 +186,7 @@ $(document).ready(function () {
               prevButton.setAttribute("disabled", true);
           } else if (currentPage == totalPages) {
               nextButton.setAttribute("disabled", true);
+              prevButton.removeAttribute("disabled");
           } else {
               prevButton.removeAttribute("disabled");
               nextButton.removeAttribute("disabled");
@@ -266,7 +266,6 @@ fetch(getCommentsURL, {    // Fetch comment API
 
 navigator.geolocation.getCurrentPosition(position => {
   const { latitude, longitude } = position.coords;
-  console.log(latitude, longitude)
   
   // Show a map centered at latitude / longitude.
   const mapContainer = document.getElementById("map");    // create map in this container
@@ -311,3 +310,5 @@ function linkToProductDetailPage(activityId) {
   // pass parameter via url
   document.location.href = urlWithParams;
 }
+
+alert("Remember to share location with the website to see today's activity around you.");
