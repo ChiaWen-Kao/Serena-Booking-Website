@@ -1,18 +1,3 @@
-/*
-  w3school: Create A Responsive Topnav
-  https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
-*/
-
-function hamburgerMenu() {
-  var x = document.getElementById("navbar");
-  if (x.className === "flex-header-menu") {
-    x.className += " responsive";
-  } else {
-    x.className = "flex-header-menu";
-  }
-}
-
-
 /* 
   w3school: Create a dropdown menu by javascript
   https://www.w3schools.com/howto/howto_js_dropdown.asp

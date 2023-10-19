@@ -2,196 +2,194 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>All Product</title>
-    <!-- Import Boostrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Import CSS -->
-    <link rel="stylesheet" href="css/general_styles_v0.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All Product</title>
+  
+  <!-- Import CSS -->
+  <link rel="stylesheet" href="css/site_styles.css">
+  <link rel="stylesheet" href="css/general_styles.css">
+  <link rel="stylesheet" href="css/explore_styles.css">
+
+  <!-- Icon -->
+  <script src="https://kit.fontawesome.com/4b9dff7943.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top"> <!-- navbar-expand-lg: large window-show menu / bg-body-tertiary: appearance of the navbar / fixed-top: navbar will fix at top when scrolling -->
-        <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Sereno</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Sereno Home"> <!-- navbar-toggler hide navigation menu on smaller screens -->
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav"> <!-- justify-content-end: align to right -->
-            <ul class="navbar-nav nav-underline"> <!-- nav-underline: hover on link show underline -->
-            <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="explore.html">Explore</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="messenger.html">Chat with Mate</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="blog.html">Blog</a>
-            </li>
-            <li class="nav-item">
-                <!-- d-flex class makes the div a flex container, and align-items-center vertically aligns its contents -->
-                <div class="d-inline-flex align-items-center">
-                <a class="nav-link" aria-current="page" href="cart.html">
-                    <img id="shopping-cart-icon" alt="shopping-cart" />
-                    <span>Cart</span>
-                </a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="account.html">Sign Up</a>
-            </li>
-            <li class="nav-item">
-                <button type="button" class="btn btn-success" id="login">Login</button>
-            </li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Body -->
-    <div class="container main-content">
-        <div class="row align-items-start">
-            <div class="col-3 filter">
-                <form>
-                    <div class="row p-3 m-4 filter-section">
-                        <label class="form-check-label fs-6 ps-0 mb-4 filter-title" for="filter-keyword">Search</label>
-                        <input class="form-control" type="text" placeholder="Search for activity" aria-label="keyword search" id="filter-keyword">
-                    </div>
-                    <div class="row p-3 m-4 filter-section">
-                        <label class="fs-6 ps-0 mb-4 filter-title">Type</label>
-                        <div class="form-check">
-                            <label class="form-check-label" for="filter-type">Fitness & Exercise</label>
-                            <input class="form-check-input" type="checkbox" value="" id="filter-type-exercise">
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label" for="filter-type-diet">Nutrition & Diet</label>
-                            <input class="form-check-input" type="checkbox" value="" id="filter-type-diet">
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label" for="filter-type-wellness">Mental Health & Wellness</label>
-                            <input class="form-check-input" type="checkbox" value="" id="filter-type-wellness">
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label" for="filter-type-handcraft">Handcraft</label>
-                            <input class="form-check-input" type="checkbox" value="" id="filter-type-handcraft">
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label" for="filter-type-friending">Friending</label>
-                            <input class="form-check-input" type="checkbox" value="" id="filter-type-friending">
-                        </div>
-                    </div>
-                    <div class="row p-3 m-4 filter-section">
-                        <label for="filter-budget" class="form-label fs-6 ps-0 mb-4 filter-title">Budget</label>
-                        <input type="range" class="form-range" min="0" max="200" id="filter-budget">
-                    </div>
-                </form>
-            </div>
-            <div class="col-9">
-                <div class="row m-4">
-                    <div class="col-3 d-flex align-items-center" id="result-total-record"></div>
-                    <div class="col-9" id="order">
-                        <div class="dropdown d-flex align-items-center justify-content-end">
-                            <label class="me-3">Sorted by</label>
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                            <ul class="dropdown-menu" id="dropdown-menu-sorted">
-                                <li><a class="dropdown-item" id="sorted-popularity">Most popular</a></li>
-                                <li><a class="dropdown-item" id="sorted-low-price">Price (low to high)</a></li>
-                                <li><a class="dropdown-item" id="sorted-high-price">Price (high to low)</a></li>
-                                <li><a class="dropdown-item" id="sorted-newest">Recently added</a></li>
-                            </ul>
-                          </div>
-                    </div>
-                </div>
-                <div class="row m-4" height="500px">
-                    <div class="row justify-content-around activity-list" id="activity-list"></div>
-                </div>
-            </div>
-        </div>
+  <!-- Header -->
+  <header class="flex-header-menu" id="navbar" aria-label="Main Menu">
+    <div class="header-name" style="width: fit-content;">
+      <a href="index.html" class="nav-link brand" aria-label="Home Page" aria-current="page" tab-index="0">Sereno</a>
     </div>
+    <div class="header-links">
+      <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
+        <i class="fa fa-bars "></i>
+      </a>
+      <div>
+        <a href="index.html" class="nav-link active" aria-label="Landing Page" tab-index="0">Home</a>
+        <a href="explore.html" class="nav-link" aria-label="Explore All Activity" tab-index="0">Explore</a>
+        <a href="messenger.html" class="nav-link" aria-label="Chat with Mate" tab-index="0">Chat with Mate</a>
+        <a href="blog.html" class="nav-link" aria-label="Blog" tab-index="0">Blog</a>
+        <a href="#" class="nav-link" aria-label="Shopping Cart" tab-index="0">Cart</a>
+        <a href="#" class="nav-link" aria-label="Sign Up" tab-index="0">Sign Up</a>
+        <a href="#" class="nav-link login" aria-label="Login" tab-index="0">
+          <button type="submit" class="dark-button">Login</button>
+        </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <section class="flex-main-content main-content" aria-label="Main Content">
+    <div class="grid-container px-5">
+      <form id="filter">
+        <div class="grid-row filter">
+          <div class="col-12 col-md-12 col-lg-12">
+            <label class="form-title" for="filter-keyword">Search</label>
+            <input class="input" type="text" placeholder="Search for activity" aria-label="keyword search" id="filter-keyword">
+          </div>
+        </div>
+        <div class="grid-row filter mt-5 mb-5">
+          <div class="col-12 col-md-12 col-lg-12">
+            <label class="form-title">Type</label>
+          </div>
+          <div class="col-12 col-md-12 col-lg-12 form-check">
+            <input type="checkbox" class="form-check-input" value="" id="filter-type-exercise">
+            <label for="filter-type" class="form-check-label">Fitness & Exercise</label>
+          </div>
+          <div class="col-12 col-md-12 col-lg-12 form-check">
+            <input type="checkbox" class="form-check-input" value="" id="filter-type-exercise">
+            <label for="filter-type" class="form-check-label">Nutrition & Diet</label>
+          </div>
+          <div class="col-12 col-md-12 col-lg-12 form-check">
+            <input type="checkbox" class="form-check-input" value="" id="filter-type-exercise">
+            <label for="filter-type" class="form-check-label">Mental Health & Wellness</label>
+          </div>
+        </div>
+        <div class="grid-row filter">
+          <div class="col-12 col-md-12 col-lg-12">
+            <label class="form-title" for="filter-keyword">Budget</label>
+            <div class="col-12 col-md-12 col-lg-12 d-inline form-check">
+              <input class="input" type="text" aria-label="keyword search" id="filter-keyword">
+              <span class="mx-4">~</span>
+              <input class="input" type="text" aria-label="keyword search" id="filter-keyword">
+            </div>
+          </div>
+        </div>
+      </form>
+      <div id="mobile-filter">
+        <i class="fa-solid fa-xmark pt-2 mx-2 d-inline h-end" style="color: #475936;" id="filterCloseBtn" onclick="closeFilter()"></i>
+        <form class="px-1">
+          <div class="grid-row filter">
+            <div class="col-12 col-md-12 col-lg-12">
+              <label class="form-title" for="filter-keyword">Search</label>
+              <input class="input" type="text" placeholder="Search for activity" aria-label="keyword search" id="filter-keyword">
+            </div>
+          </div>
+          <div class="grid-row filter mt-5 mb-5">
+            <div class="col-12 col-md-12 col-lg-12">
+              <label class="form-title">Type</label>
+            </div>
+            <div class="col-12 col-md-12 col-lg-12 form-check">
+              <input type="checkbox" class="form-check-input" value="" id="filter-type-exercise">
+              <label for="filter-type" class="form-check-label">Fitness & Exercise</label>
+            </div>
+            <div class="col-12 col-md-12 col-lg-12 form-check">
+              <input type="checkbox" class="form-check-input" value="" id="filter-type-exercise">
+              <label for="filter-type" class="form-check-label">Nutrition & Diet</label>
+            </div>
+            <div class="col-12 col-md-12 col-lg-12 form-check">
+              <input type="checkbox" class="form-check-input" value="" id="filter-type-exercise">
+              <label for="filter-type" class="form-check-label">Mental Health & Wellness</label>
+            </div>
+          </div>
+          <div class="grid-row filter">
+            <div class="col-12 col-md-12 col-lg-12">
+              <label class="form-title" for="filter-keyword">Budget</label>
+              <div class="col-12 col-md-12 col-lg-12 d-inline form-check">
+                <input class="input" type="text" aria-label="keyword search" id="filter-keyword">
+                <span class="mx-4">~</span>
+                <input class="input" type="text" aria-label="keyword search" id="filter-keyword">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <section>
+        <div class="grid-row d-inline v-center h-between">
+          <div class="col-6 col-md-6 col-lg-6">
+            <div id="result-total-record"></div>
+          </div>
+          <div class="col-6 col-md-6 col-lg-6">
+            <button type="button" class="dark-button" id="order" onclick="categorySearchDropdownMenu()" aria-expanded="false">Sorted by</button>
+            <div class="dropdown-content" id="activity-order" name="activity-order">
+              <a>Most popular</a>
+              <a>Price (low to high)</a>
+              <a>Price (high to low)</a>
+              <a>Recently added</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-row m-0" id="activity-list"></div>
+      </section>
+
+      <div class="float-btn d-inline h-center v-center" id="filter-btn" onclick="displayFilter()">
+        <i class="fa-solid fa-filter fa-2xl" style="color: #ffffff;"></i>
+      </div>
+    </div>
+  </section>
     
-    <!-- Footer -->
-    <footer class="text-center text-lg-start mt-5"> <!-- text-lg-start: large window-text left alignment / mt-5: 5 margin-top -->
-        <!-- Section: links -->
-        <section class="footer">
-        <div class="container text-center text-md-start p-5"> <!-- p-5: 5 padding-top -->
-            <!-- Grid row -->
-            <div class="row">
-            <!-- Grid column -->
-            <div class="col-md-1 col-lg-1 col-xl-1 mx-auto"> <!-- mx-auto: horizontal margin to div -->
-                <!-- Links -->
-                <h6 class="fw-bold mt-4 mb-4">Explore</h6> <!-- fw-bold: bold font-wight -->
-                <p> <!-- make sure the space between each link -->
-                <a href="index.html" class="text-reset">Home</a> <!-- text-reset: removes any custom text color -->
-                </p>
-                <p>
-                <a href="explore.html" class="text-reset">Activity</a>
-                </p>
-                <p>
-                <a href="blog.html" class="text-reset">Blog</a>
-                </p>
-            </div>
-            <!-- Grid column -->
-            <!-- Grid column -->
-            <div class="col-md-1 col-lg-1 col-xl-1 mx-auto">
-                <!-- Links -->
-                <h6 class="fw-bold mt-4 mb-4">About Us</h6>
-                <p>
-                <a href="index.html" class="text-reset">Contact Us</a>
-                </p>
-                <p>
-                <a href="explore.html" class="text-reset">FAQs</a>
-                </p>
-            </div>
-            <!-- Grid column -->
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
-                <!-- Links -->
-                <h6 class="fw-bold mt-4 mb-4">Further Information</h6>
-                <p>
-                <a href="index.html" class="text-reset">Privacy Policy</a>
-                </p>
-                <p>
-                <a href="explore.html" class="text-reset">Terms of Service</a>
-                </p>
-            </div>
-            <!-- Grid column -->
-            <!-- Grid column -->
-            <div class="col-md-5 col-lg-5 col-xl-5 mx-auto">
-                <!-- Links -->
-                <h6 class="fw-bold mt-4 mb-4">Subscribe to Our Newsletter</h6>
-                <p>You will never miss our new release experiences, discount, etc. Our newsletter is once a week, every Friday.</p>
-                <div class="input-group mb-3">
-                <input type="email" class="form-control input-newsletter" placeholder="user@yoursite.com" aria-label="Newsletter Subscribe" aria-describedby="button-newsletter">
-                <button class="btn btn-outline-secondary" type="button" id="button-newsletter">Subscribe</button>
-                </div>
-            </div>
-            <!-- Grid column -->
-            </div>
+  <!-- Footer -->
+  <footer class="mt-9 py-3 flex-footer" style="height: auto; background-color: var(--dark1); display: flex; flex-direction: column;">
+    <div class="grid-row px-5">
+      <div class="col-12 col-md-3 col-lg-2 footer-menu">
+        <ul style="color: white;">
+          <h4>Explore</h4>
+          <li>Home</li>
+          <li>Activity</li>
+          <li>Review</li>
+          <li>Blog</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3 col-lg-2 footer-menu">
+        <ul style="color: white;">
+          <h4>About Us</h4>
+          <li>Contact Us</li>
+          <li>FAQs</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3 col-lg-3 footer-menu">
+        <ul style="color: white;">
+          <h4>Further Information</h4>
+          <li>Privacy Policy</li>
+          <li>Terms of Service</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-12 col-lg-5 newsletter">
+        <div style="color: white;">
+          <h4>Subscribe to Our Newsletter</h4>
+          <p>We will never miss our new release experiences, discount etc. Our newsletter is once a week, every Friday.</p>
+          <div class="subscribe-form">
+            <input type="email" placeholder="user@yoursite.com"></input>
+            <button type="button"class="dark-button">Subscribe</button>
+          </div>
         </div>
-        </section>
-        <!-- Section: links -->
-        <!-- Copyright -->
-        <section class="copyright">
-        <div class="text-center p-3"> <!-- p-3: 3 padding -->
-            DECO7140 Introduction of Web Design | Chia-Wen Kao
-        </div>
-        </section>
-        <!-- Copyright -->
-    </footer>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright">DECO7140 Introduction of Web Design | Chia-Wen Kao</div>
 </body>
 
 <!-- Import JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="js/search_result_interaction.js"></script>
+<script src="js/site_interaction.js"></script>
+<script src="js/explore_interaction.js"></script>
 
 </html>

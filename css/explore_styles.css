@@ -1,0 +1,133 @@
+/*
+    Default Mobile Size
+*/
+.filter {
+  border: 1px solid var(--lightgrey);
+  border-radius: 5px;
+  padding: 20px;
+  height: fit-content;
+}
+
+.form-title {
+  color: var(--dark1);
+  font-weight: 600;
+}
+
+.form-check {
+  display: inline-flex;
+  align-items: center;
+}
+
+.form-check-input {
+  width: 20px !important;
+  height: 20px;
+  margin: 0 10px;
+}
+
+.form-check-label {
+  margin: 0;
+}
+
+.input {
+  position: relative;
+  width: 100%;
+  border: 1px solid var(--lightgrey);
+}
+
+#filter {
+  display: none;
+  height: fit-content;
+}
+
+.float-btn {
+  display: flex;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  float: right;
+  width: 50px;
+  height: 50px;
+  background-color: var(--orange);
+  border-radius: 50%;
+  padding: 5px;
+}
+
+#mobile-filter {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: fit-content;
+  width: 90%;
+  overflow-y: auto;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgb(71, 89, 54, 0.2);
+}
+
+.activity-card {
+  height: 350px;
+  border: 1px solid var(--mainbackground);
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+  margin: 2vh 2vw;
+}
+
+/*
+    Tablet and phones in landscape
+*/
+@media only screen and (min-width: 601px) and (max-width: 1194px) {
+  #filter {
+    display: none;
+  }
+
+  #mobile-filter {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+    width: 70%;
+    overflow-y: auto;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(71, 89, 54, 0.2);
+  }
+}
+
+
+/* 
+    Desktop: These rules are not only applied if the screen is wider than 1194px
+*/
+@media only screen and (min-width: 1195px) {
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 28% 72%;
+    grid-gap: 16px;
+    margin: 2vh 2vw;
+  }
+
+  #filter {
+    display: grid;
+  }
+
+  .float-btn {
+    display: none !important;
+  }
+
+  #mobile-filter {
+    display: none;
+  }
+}

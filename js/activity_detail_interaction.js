@@ -59,12 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     container.appendChild(activityImage.cloneNode(true));    // copy its attribute to different elements
                 });
                 
-                // activity title
+                // navigation
                 const navigationActivityTitleContainer = document.getElementById("navigation-activity-title")
+                navigationActivityTitleContainer.innerHTML = item.name;
+
+                // activity title
                 const activityTitleContainer = document.getElementById("activity-title");
                 activityTitleContainer.innerHTML = item.name
-
-                navigationActivityTitleContainer.innerHTML = item.name;
                     
                 // activity location
                 const activityLocationContainer = document.getElementById("activity-location");
