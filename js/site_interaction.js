@@ -76,5 +76,6 @@ subscribeNewsletter = () => {
 */
 
 joinActivity = () => {
+
   alert("Thanks for join the activity! We already sign up for you.")
 }

@@ -198,14 +198,35 @@
           </div>
           <div class="row-content-arrow">
             <span></span>
-            <button class="btn" id="comment-prev" aria-label="Previous Page">
-              <i class="fa-solid fa-circle-chevron-left fa-2xl" style="color: white;"></i>
-            </button>
-            <button class="btn" id="comment-next" aria-label="Next Page">
-              <i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: white;"></i>
-            </button>
+            <button class="light-button button-sm" onclick="displayCommentWindow()" id="add-comment" width="fit-content">Add comment</button>
           </div>
-          <div class="flex-comment-cards"></div>
+          <div class="flex-comment-cards mt-6"></div>
+          
+        </div>
+      </div>
+        
+      <!-- Join Activity Modal -->
+      <div id="commentModal" class="modal">
+        <!-- Modal Content -->
+        <div class="modal-content">
+          <i class="fa-solid fa-xmark close" id="close" style="color: #535353;"></i>
+          <form id="comment">
+            <div class="comment-name mb-2">
+              <label for="comment-name">Name</label>
+              <br>
+              <input type="text" id="comment-name" name="comment-name">
+            </div>
+            <div class="comment-content mb-2">
+              <label for="comment-content">Comment</label>
+              <input type="text" id="comment-content" name="comment-content">
+            </div>
+            <div class="comment-rate mb-2">
+              <label for="comment-rate">Rate</label>
+              <input type="text" id="comment-rate" name="comment-rate">
+            </div>
+            <span id="comment-inform"></span>
+          </form>
+          <button class="dark-button button-sm mt-5" style="justify-self: center;" id="submit-comment" onclick="addComment()">Submit</button>
         </div>
       </div>
 

@@ -247,6 +247,108 @@ fetch(getCommentsURL, {    // Fetch comment API
 
 
 /* 
+  Dispaly Comment Modal
+  https://www.w3schools.com/howto/howto_css_modals.asp
+*/
+displayCommentWindow = () => {
+  // Get the modal
+  var modal = document.getElementById("commentModal");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("add-comment");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal 
+  btn.addEventListener("click", function(e) {
+    e.preventDefault();
+    modal.style.display = "block";
+  });
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
+
+/*
+  Add Comment
+*/
+
+// const commentForm = document.getElementById("comment")
+// function submitForm(event){
+
+//   //Preventing page refresh
+//   event.preventDefault();
+// }
+
+// commentForm.addEventListener('submit', submitForm);
+
+addComment = (event) => {
+
+  // validate input
+  const name = document.getElementById("comment-name");
+  const content = document.getElementById("comment-content");
+  const rate = document.getElementById("comment-rate");
+  const commentInform = document.getElementById("comment-inform");
+  commentInform.style.color = "red";
+  commentInform.innerHTML = ``;
+
+  if (isNaN(rate.value) || name.value.trim() === "") {
+    commentInform.innerHTML = `Please enter number`;
+  } else if (name == null) {
+    commentInform.innerHTML = `Please enter your name`;
+  } else if (content == null) {
+    commentInform.innerHTML = `Please enter your comment`;
+  } else {
+    const baseURL = "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/comments/";
+
+    const postCommentURL = baseURL;
+    const postCommentMethod = "POST";
+    const postCommentHeaders = {
+      'Content-Type': 'application/json'
+    };
+
+    const postCommentBody = JSON.stringify({
+      username: name.value,
+      comment: content.value,
+      rating: rate.value,
+      website_code: "sereno"
+    });
+
+    fetch(postCommentURL, {
+      method: postCommentMethod,
+      headers: postCommentHeaders,
+      body: postCommentBody
+    })
+
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+      commentInform.style.color = "green";
+      commentInform.innerHTML = "Comment successfully added!";
+      sleep(4000);
+      var modal = document.getElementById("commentModal");
+      modal.style.display = "none";
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      commentInform.innerHTML = "An error occurred while adding the comment.";
+
+    });
+  }
+}
+
+
+/* 
   Current Location (current location and nearby activity marks)
   https://www.w3schools.com/html/html5_geolocation.asp
 */
