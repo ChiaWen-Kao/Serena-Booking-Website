@@ -48,13 +48,13 @@
     <!-- banner with search bar -->
     <div class="flex-banner">
       <div class="search-bar">
-        <form id="activity-search">
+        <form id="activity-search" role="Search">
           <!-- keyword -->
           <div class="keyword-search">
             <label for="keyword" style="display: none;">Keyword Search</label>
-            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/92A07E/search--v1.png" alt="search"/>
-            <input type="search" id="keyword" name="keyword" aria-label="Activity Search" placeholder="activity Name, Location...">
-            <button type="button" class="dark-button" id="searchbar-submit">Search</button>
+            <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #92a07e;"></i>
+            <input type="search" id="keyword" name="keyword" aria-label="Activity Keyword Search" placeholder="activity Name, Location...">
+            <button type="button" class="dark-button" id="searchbar-submit" aria-label="Search">Search</button>
           </div>
           <hr class="mt-4 mb-4">
           <!-- advanced search -->
@@ -79,13 +79,13 @@
             <div class="category-search">
               <label for="activity-category">Category</label>
               <br>
-              <button type="button" class="dark-button" id="category" onclick="categorySearchDropdownMenu()" aria-expanded="false">Select category</button>
-              <div class="dropdown-content" id="activity-category" name="activity-category">
-                <a>Fitness & Exercise</a>
-                <a>Nutrition & Diet</a>
-                <a>Mental Health & Wellness</a>
-                <a>Handcraft</a>
-                <a>Friending</a>
+              <button type="button" class="dark-button" id="category" onclick="categorySearchDropdownMenu()" aria-haspopup="listbox" aria-expanded="false">Select category</button>
+              <div class="dropdown-content" id="activity-category" name="activity-category" role="listbox">
+                <a aria-label="Fitness & Exercise">Fitness & Exercise</a>
+                <a aria-label="Nutrition & Diet">Nutrition & Diet</a>
+                <a aria-label="Mental Health & Wellness">Mental Health & Wellness</a>
+                <a aria-label="Handcraft">Handcraft</a>
+                <a aria-label="Friending">Friending</a>
               </div>
             </div>
           </div>
@@ -98,51 +98,75 @@
         <!-- Category -->
         <h2>Category</h2>
         <div class="flex-category">
-          <!-- Fitness and Exercise -->
-          <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1579454566790-f9e5697ddf36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2684&q=80');">
+          <!-- Fitness and Exercise-->
+          <!-- 
+            Photo by Jade Stephens on Unsplash
+            https://unsplash.com/photos/N21356amsyw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+          -->
+          <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1579454566790-f9e5697ddf36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2684&q=80');" aria-label="Fitness and Exercise Category">
             <h3>
               Fitness<br>
               &<br>
               Exercise
             </h3>
-            <a href="#" class="light-button">Explore</a>
+            <a href="#" class="light-button" aria-label="Explore Fitness and Exercise" role="button">Explore</a>
           </div>
+
           <!-- Nutrition and Diet -->
-          <div class="category-card" style="background-image: url('https://images.pexels.com/photos/4253320/pexels-photo-4253320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+          <!--
+            Photo by cottonbro studio on Pexel
+            https://www.pexels.com/zh-tw/photo/4253320/
+          -->
+          <div class="category-card" style="background-image: url('https://images.pexels.com/photos/4253320/pexels-photo-4253320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');" aria-label="Nutrition and Diet Category">
             <h3>
               Nutrition<br>
               &<br>
               Diet
             </h3>
-            <a href="#" class="light-button">Explore</a>
+            <a href="#" class="light-button" aria-label="Explore Nutrition and Diet" role="button">Explore</a>
           </div>
+
           <!-- Mental Health and Wellness-->
-          <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1566333449824-f58e920a21b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80');">
+          <!--
+            Photo by Taisiia Stupak on Unsplash
+            https://unsplash.com/photos/7_6hL2eo3qc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+          -->
+          <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1566333449824-f58e920a21b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80');" aria-label="Mental Health and Wellness Category">
             <h3>
               Mental Health<br>
               &<br>
               Wellness
             </h3>
-            <a href="#" class="light-button">Explore</a>
+            <a href="#" class="light-button" aria-label="Explore Mental Health and Wellness" role="button">Explore</a>
           </div>
+
           <!-- Handcraft -->
-          <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1572725335307-3303414b3360?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80');">
+          <!-- 
+            Photo by Anne Nygård on Unsplash
+            https://unsplash.com/photos/8Q0zOznVPc8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+          -->
+          <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1572725335307-3303414b3360?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80');" aria-label="DIY and Handcraft Category">
             <h3>
               DIY<br>
               &<br>
               Handcraft
               
             </h3>
-            <a href="#" class="light-button">Explore</a>
+            <a href="#" class="light-button" aria-label="Explore DIY and Handcraft" role="button">Explore</a>
           </div>
+
           <!-- Friending -->
-          <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1569937755776-cf7f47af4b73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80');">
+          <!--
+            Photo by Elevate on Unsplash
+            https://unsplash.com/photos/1yvOLKRwQKc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+          -->
+          <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1569937755776-cf7f47af4b73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80');" aria-label="Social and Friending Category">
             <h3>
               Social<br>
               &<br>
               Friending
             </h3>
-            <a href="#" class="light-button">Explore</a>
+            <a href="#" class="light-button" aria-label="Explore Social and Friending" role="button">Explore</a>
           </div>
         </div>
       </div>
@@ -151,9 +175,13 @@
       <div class="padding-content-without-bg">
         <h2>Popular Activity</h2>
         <div class="flex-popular-activity">
-          <button class="btn m" id="popular-activity-prev" aria-label="Previous Page"><i class="fa-solid fa-circle-chevron-left fa-2xl" style="color: #475936; margin-left: -30px;"></i></button>
+          <button class="btn m" id="popular-activity-prev" aria-label="Previous Page">
+            <i class="fa-solid fa-circle-chevron-left fa-2xl" style="color: #475936; margin-left: -30px;"></i>
+          </button>
           <div class="flex-popular-activity-cards"></div>
-          <button class="btn" id="popular-activity-next" aria-label="Next Page"><i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: #475936; margin-right: -30px;"></i></button>
+          <button class="btn" id="popular-activity-next" aria-label="Next Page">
+            <i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: #475936; margin-right: -30px;"></i>
+          </button>
         </div>
       </div>
 
@@ -163,15 +191,19 @@
           <div class="row-content-desc">
             <h2>Discover What Our Participants Say</h2>
             <p>
-              At Balance Bliss Hub, we're all about enhancing your well-being through unique local experiences. 
+              At Sereno, we're all about enhancing your well-being through unique local experiences. 
               But don't just take our word for it – hear from fellow users who have transformed their lives through our wellness activities.
               See what our participants said:
             </p>
           </div>
           <div class="row-content-arrow">
             <span></span>
-            <button class="btn" id="comment-prev" aria-label="Previous Page"><i class="fa-solid fa-circle-chevron-left fa-2xl" style="color: white;"></i></button>
-            <button class="btn" id="comment-next" aria-label="Next Page"><i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: white;"></i></button>
+            <button class="btn" id="comment-prev" aria-label="Previous Page">
+              <i class="fa-solid fa-circle-chevron-left fa-2xl" style="color: white;"></i>
+            </button>
+            <button class="btn" id="comment-next" aria-label="Next Page">
+              <i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: white;"></i>
+            </button>
           </div>
           <div class="flex-comment-cards"></div>
         </div>
@@ -181,13 +213,16 @@
       <div class="padding-content-without-bg">
         <h2>See Today's Activity Around You</h2>
         <div class="flex-nearby-activity">
-          <div id="map"></div>
+          <div id="map">
+            <!-- Map provided by Google Map -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.092518115877!2d153.01111557521594!3d-27.497498017890774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b91508241eb7c49%3A0x9ae9946d3710eee9!2z5piG5aOr6Jit5aSn5a24!5e0!3m2!1szh-TW!2sau!4v1697767418923!5m2!1szh-TW!2sau" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
           <div id="flex-nearby-activity-cards"></div>
         </div>
       </div>
     </section>
   </div>
-  
+
   <!-- Footer -->
   <footer class="mt-9 py-3 flex-footer" style="height: auto; background-color: var(--dark1); display: flex; flex-direction: column;">
     <div class="grid-row px-5">

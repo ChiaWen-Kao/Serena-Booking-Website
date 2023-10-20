@@ -7,6 +7,10 @@
 .flex-banner {
   width: 100vw;
   height: 20vh;
+  /*
+    Photo by Kelsey Chance on Unsplash
+    https://unsplash.com/photos/ZrhtQyGFG6s?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+  */
   background-image: url("https://images.unsplash.com/photo-1519671282429-b44660ead0a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
   background-size: cover;
   background-repeat: no-repeat;
@@ -312,6 +316,7 @@
   height: fit-content;
   width: fit-content;
 }
+
 
 /* Tablet and phones in landscape */
 @media only screen and (min-width: 601px) and (max-width: 1194px) {

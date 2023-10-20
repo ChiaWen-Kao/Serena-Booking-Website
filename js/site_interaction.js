@@ -33,7 +33,8 @@ convertDateTimeFormat = (dateTime) => {
 
 
 /*
-  Sleep
+  Coding Nepal: Sleep
+  https://www.codingnepalweb.com/create-email-checker-javascript/
 */
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -66,4 +67,14 @@ subscribeNewsletter = () => {
   }
   
   subscribeForm.appendChild(subscribeValid);
+}
+
+
+/*
+  Join activity: Inform user that they are successfully sign up for the activity.
+  - This function will be used in index.html and product.html page.
+*/
+
+joinActivity = () => {
+  alert("Thanks for join the activity! We already sign up for you.")
 }

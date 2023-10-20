@@ -21,24 +21,6 @@ window.onclick = function(event) {
 }
 
 
-/*
-  Date Time Format
-*/
-function convertDateTimeFormat(dateTime) {
-  let objectDate = new Date(dateTime);
-
-  // JavaScript returns a zero-based index for the month, meaning January is 0
-  // add 1 to the month value, and both the day and hour values have two digits
-  let day = objectDate.getDate().toString().padStart(2, '0');    
-  let month = (objectDate.getMonth() + 1).toString().padStart(2, '0');
-  let year = objectDate.getFullYear();
-  let hour = objectDate.getHours().toString().padStart(2, '0');
-  let minute = objectDate.getMinutes().toString().padStart(2, '0');
-
-  return `${year}-${month}-${day} ${hour}:${minute}`;
-}
-
-
 /* 
     Home: Search bar
     
@@ -164,7 +146,7 @@ $(document).ready(function () {
                 </div>
                 <p>${cardData.description}</p>
               </div>
-              <button class="dark-button">Join</button>
+              <button class="dark-button" id="join" onclick="joinActivity()">Join</button>
               `;
 
               nearbyActivityCardContainer.appendChild(nearbyActivityCard);
@@ -243,6 +225,10 @@ fetch(getCommentsURL, {    // Fetch comment API
       reviewCard.innerHTML = `
         <div class="row-content-icon-text">
           <div class="rounded-image">
+            <!--
+              Photo by Jake Nackos on Unsplash
+              https://unsplash.com/photos/IF9TK5Uy-KI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+            -->
             <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1961&q=80" alt="avatar" />
           </div>
           <h4 id="review-username">${item.username}</h4>
@@ -261,15 +247,17 @@ fetch(getCommentsURL, {    // Fetch comment API
 
 
 /* 
-    Current Location (current location and nearby activity marks)
+  Current Location (current location and nearby activity marks)
+  https://www.w3schools.com/html/html5_geolocation.asp
 */
 
 navigator.geolocation.getCurrentPosition(position => {
   const { latitude, longitude } = position.coords;
   
-  // Show a map centered at latitude / longitude.
+  // show a map centered at latitude / longitude
   const mapContainer = document.getElementById("map");    // create map in this container
-
+  // if user didn't accept sharing location, default map will be shown.
+  mapContainer.innerHTML = ``;
   mapContainer.innerHTML = `
     <iframe width="100%" height="450" style="border:0" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCIPd3N7noO3Mv0KFGY40KC2pvWX04oXjE&q=${latitude},${longitude}"></iframe>
   `;
@@ -286,20 +274,12 @@ function getCurrentTime() {
   return convertDateTimeFormat(currentDateTime);
 }
 
+
 /*
-    Link the card in popular activity section to activity detail page
+  See the detail page of activity
 */
-function displayNearbyActivity() {
-
-}
-
 
 function linkToProductDetailPage(activityId) {
-  /*
-      Parameters:
-          1. activityId (int): activity id on api.
-  */
-
   // construct a parameter string
   var queryParams = {
       activityId: activityId
@@ -311,4 +291,5 @@ function linkToProductDetailPage(activityId) {
   document.location.href = urlWithParams;
 }
 
-alert("Remember to share location with the website to see today's activity around you.");
+
+alert("Welcome to share location with Sereno to see today's activity around you.");

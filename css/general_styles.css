@@ -66,10 +66,12 @@ body {
   border: none;
   font-weight: 600;
   cursor: pointer;
+  border-style: none;
 }
 
 .dark-button:hover {
   background-color: #5f7748;
+  border-style: none;
 }
 
 .light-button {
