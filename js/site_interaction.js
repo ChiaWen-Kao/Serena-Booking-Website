@@ -12,6 +12,11 @@ hamburgerMenu = () => {
   }
 }
 
+
+/*
+  Convert date time format (YYYY-MM-DD HOURS(24):MINUTES)
+*/
+
 convertDateTimeFormat = (dateTime) => {
   let objectDate = new Date(dateTime);
 
@@ -24,4 +29,41 @@ convertDateTimeFormat = (dateTime) => {
   let minute = objectDate.getMinutes().toString().padStart(2, '0');
 
   return `${year}-${month}-${day} ${hour}:${minute}`;
+}
+
+
+/*
+  Sleep
+*/
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+/*
+  Validate input format
+*/
+
+subscribeNewsletter = () => {
+
+  // validate email input format
+
+  const subscribeForm = document.getElementById("newsletter");
+  const emailInput = document.getElementById("subscribe-input").value;
+  const subscribeValid = document.getElementById("news-letter-validation");
+
+  subscribeValid.innerHTML = ``;
+  
+  if (emailInput.includes("@")) {
+    subscribeValid.innerHTML = `Correct email format.`;
+
+    // inform user successfully subscribe
+    sleep(1000).then(() => {
+      alert("Thanks for you subscribe, keep following our latest news!");    // inform user successfully subscribe
+    });
+  } else {
+    subscribeValid.innerHTML = `Wrong email format.`;
+  }
+  
+  subscribeForm.appendChild(subscribeValid);
 }

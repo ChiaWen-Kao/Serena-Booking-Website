@@ -215,13 +215,15 @@
         </ul>
       </div>
       <div class="col-12 col-md-12 col-lg-5 newsletter">
-        <div style="color: white;">
+        <div style="color: white;" id="newsletter">
           <h4>Subscribe to Our Newsletter</h4>
           <p>We will never miss our new release experiences, discount etc. Our newsletter is once a week, every Friday.</p>
-          <div class="subscribe-form">
-            <input type="email" placeholder="user@yoursite.com"></input>
-            <button type="button"class="dark-button">Subscribe</button>
+          <div class="subscribe-form" id="subscribe-form">
+            <label for="subscribe-input" hidden>Subscribe Newsletter</label>
+            <input type="email" id="subscribe-input" placeholder="user@yoursite.com" required></input>
+            <button type="submit" class="dark-button" id="subscribe-button" onclick="subscribeNewsletter()">Subscribe</button>
           </div>
+          <span class="font-sm" id="news-letter-validation"></span>
         </div>
       </div>
     </div>
