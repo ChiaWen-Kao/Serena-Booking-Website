@@ -269,7 +269,7 @@
 }
 
 .flex-comment-cards {
-  flex-direction: row;
+  flex-direction: row-reverse;
   display: inline-flex;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
