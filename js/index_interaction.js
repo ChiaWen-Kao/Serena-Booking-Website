@@ -293,48 +293,72 @@ addComment = (event) => {
   commentInform.style.color = "red";
   commentInform.innerHTML = ``;
 
-  if (rate.value == null || Number.isInteger(rate.value)) {
+  if (rate.value == "" || Number.isInteger(rate.value)) {
     commentInform.innerHTML = `Please enter number`;
-  } else if (name.value == null) {
+  } else if (name.value == "") {
     commentInform.innerHTML = `Please enter your name`;
-  } else if (content.value == null) {
+  } else if (content.value == "") {
     commentInform.innerHTML = `Please enter your comment`;
   } else {
-    // const baseURL = "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/comments/";
+    const baseURL = "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/comments/";
 
-    // const postCommentURL = baseURL;
-    // const postCommentMethod = "POST";
-    // const postCommentHeaders = {
-    //   'Content-Type': 'application/json'
-    // };
+    const postCommentURL = baseURL;
+    const postCommentMethod = "POST";
+    const postCommentHeaders = {
+      'Content-Type': 'application/json'
+    };
 
-    // const postCommentBody = JSON.stringify({
-    //   username: name.value,
-    //   comment: content.value,
-    //   rating: rate.value,
-    //   website_code: "sereno"
-    // });
+    const postCommentBody = JSON.stringify({
+      username: name.value,
+      comment: content.value,
+      rating: rate.value,
+      website_code: "sereno"
+    });
 
-    // fetch(postCommentURL, {
-    //   method: postCommentMethod,
-    //   headers: postCommentHeaders,
-    //   body: postCommentBody
-    // })
+    fetch(postCommentURL, {
+      method: postCommentMethod,
+      headers: postCommentHeaders,
+      body: postCommentBody
+    })
 
-    // .then(response => response.json())
-    // .then(data => {
-    //   console.log(data)
-    //   commentInform.style.color = "green";
-    //   commentInform.innerHTML = "Comment successfully added!";
-    //   sleep(4000);
-    //   var modal = document.getElementById("commentModal");
-    //   modal.style.display = "none";
-    // })
-    // .catch(error => {
-    //   console.error("Error:", error);
-    //   commentInform.innerHTML = "An error occurred while adding the comment.";
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+      sleep(3000);
+      var modal = document.getElementById("commentModal");
+      modal.style.display = "none";
+      alert("Comment successfully added!")
 
-    // });
+      const reviewCardContainer = document.querySelector(".flex-comment-cards");    // create card in this container
+      const reviewCard = document.createElement("div");
+      reviewCard.classList.add("review-card");
+
+      reviewCard.innerHTML = `
+        <div class="row-content-icon-text">
+          <div class="rounded-image">
+            <!--
+              Photo by Jake Nackos on Unsplash
+              https://unsplash.com/photos/IF9TK5Uy-KI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+            -->
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1961&q=80" alt="avatar" />
+          </div>
+          <h4 id="review-username">${data.username}</h4>
+        </div>
+        <div class="review-card-content">
+          <i class="fa-solid fa-quote-left" style="color: #ffffff;"></i>
+          <div>${data.comment}</div>
+          <i class="fa-solid fa-quote-right" style="color: #ffffff;"></i>
+        </div>
+      `;
+
+      // Create card in the container
+      reviewCardContainer.appendChild(reviewCard);
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      commentInform.innerHTML = "An error occurred while adding the comment.";
+
+    });
   }
 }
 
