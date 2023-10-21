@@ -283,15 +283,6 @@ displayCommentWindow = () => {
   Add Comment
 */
 
-// const commentForm = document.getElementById("comment")
-// function submitForm(event){
-
-//   //Preventing page refresh
-//   event.preventDefault();
-// }
-
-// commentForm.addEventListener('submit', submitForm);
-
 addComment = (event) => {
 
   // validate input
@@ -302,48 +293,48 @@ addComment = (event) => {
   commentInform.style.color = "red";
   commentInform.innerHTML = ``;
 
-  if (isNaN(rate.value) || name.value.trim() === "") {
+  if (rate.value == null || Number.isInteger(rate.value)) {
     commentInform.innerHTML = `Please enter number`;
-  } else if (name == null) {
+  } else if (name.value == null) {
     commentInform.innerHTML = `Please enter your name`;
-  } else if (content == null) {
+  } else if (content.value == null) {
     commentInform.innerHTML = `Please enter your comment`;
   } else {
-    const baseURL = "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/comments/";
+    // const baseURL = "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/comments/";
 
-    const postCommentURL = baseURL;
-    const postCommentMethod = "POST";
-    const postCommentHeaders = {
-      'Content-Type': 'application/json'
-    };
+    // const postCommentURL = baseURL;
+    // const postCommentMethod = "POST";
+    // const postCommentHeaders = {
+    //   'Content-Type': 'application/json'
+    // };
 
-    const postCommentBody = JSON.stringify({
-      username: name.value,
-      comment: content.value,
-      rating: rate.value,
-      website_code: "sereno"
-    });
+    // const postCommentBody = JSON.stringify({
+    //   username: name.value,
+    //   comment: content.value,
+    //   rating: rate.value,
+    //   website_code: "sereno"
+    // });
 
-    fetch(postCommentURL, {
-      method: postCommentMethod,
-      headers: postCommentHeaders,
-      body: postCommentBody
-    })
+    // fetch(postCommentURL, {
+    //   method: postCommentMethod,
+    //   headers: postCommentHeaders,
+    //   body: postCommentBody
+    // })
 
-    .then(response => response.json())
-    .then(data => {
-      console.log(data)
-      commentInform.style.color = "green";
-      commentInform.innerHTML = "Comment successfully added!";
-      sleep(4000);
-      var modal = document.getElementById("commentModal");
-      modal.style.display = "none";
-    })
-    .catch(error => {
-      console.error("Error:", error);
-      commentInform.innerHTML = "An error occurred while adding the comment.";
+    // .then(response => response.json())
+    // .then(data => {
+    //   console.log(data)
+    //   commentInform.style.color = "green";
+    //   commentInform.innerHTML = "Comment successfully added!";
+    //   sleep(4000);
+    //   var modal = document.getElementById("commentModal");
+    //   modal.style.display = "none";
+    // })
+    // .catch(error => {
+    //   console.error("Error:", error);
+    //   commentInform.innerHTML = "An error occurred while adding the comment.";
 
-    });
+    // });
   }
 }
 
