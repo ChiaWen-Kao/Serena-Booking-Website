@@ -129,6 +129,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.4); /* This creates a 50% black overlay */
+    /* If using a background-image, use the below property */
+  background-blend-mode: multiply;
 }
 
 .category-card .light-button {
@@ -182,6 +185,9 @@
 .activity-card-content h4 {
   color: var(--dark1);
   margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .row-content-icon-text {
@@ -240,7 +246,7 @@
   width: 400px;
   height: 180px;
   color: white;
-  background-color: rgb(255, 255, 255, 0.3);
+  background-color: rgb(243, 243, 243, 0.1);
   border-radius: 10px;
 }
 

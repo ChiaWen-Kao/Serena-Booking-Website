@@ -132,7 +132,7 @@ $(document).ready(function () {
           popularActivityCardContainer.appendChild(popularActivityCard);
 
           // display today's nearby activity
-          if ((convertDateTimeFormat(cardData.date_time) >= getCurrentTime()) && (cardData.location == "St. Lucia, Australia")) {
+          if (cardData.location == "St. Lucia, Australia") {  // for demo, to see the layout, not using the condition of date
             const nearbyActivityCard = document.createElement("div");
             nearbyActivityCard.classList.add("nearby-activity-card", "mb-2");
             nearbyActivityCard.setAttribute("id", cardData.id);

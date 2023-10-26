@@ -91,7 +91,7 @@ body {
 
 .messenger-chat {
   display: grid;
-  grid-template-rows: 12% auto 10%;
+  grid-template-rows: 12% 78% 10%;
   border-right-style: solid;
   border-width: 1px;
   border-color: var(--mainbackground);
@@ -170,7 +170,7 @@ body {
 
   /* messenger chat area (second part) */
   .messenger-chat {
-    grid-template-rows: 8% auto 10%;
+    grid-template-rows: 8% 75% 10%;
   }
 
   /* chat list */
@@ -214,5 +214,9 @@ body {
   /* chat detail */
   .messenger-detail {
     display: none;
+  }
+
+  #messenger-chat-input {
+    grid-template-columns: 10% 10% 80%;  
   }
 }

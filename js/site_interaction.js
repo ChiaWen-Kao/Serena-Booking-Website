@@ -60,7 +60,12 @@ subscribeNewsletter = () => {
 
     // inform user successfully subscribe
     sleep(1000).then(() => {
-      alert("Thanks for you subscribe, keep following our latest news!");    // inform user successfully subscribe
+      let text = "Do you want to subscribe newsletter?";    // inform user successfully subscribe
+      if (confirm(text) == true) {
+        alert("Thanks for you subscribe, keep following our latest news!");
+      } else {
+        alert("You cancel subscription, you can subscribe anytime!");
+      }
     });
   } else {
     subscribeValid.innerHTML = `Wrong email format.`;
@@ -77,5 +82,5 @@ subscribeNewsletter = () => {
 
 joinActivity = () => {
 
-  alert("Thanks for join the activity! We already sign up for you.")
+  confirm("Thanks for join the activity! We already sign up for you.")
 }

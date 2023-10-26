@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // count total records
   var resultCount = 0
 
-  // create card in this container 
+  // create card in this container
   const activityResultContainer = document.getElementById("activity-list");
 
   fetch(urlWithParams, requestOptions)

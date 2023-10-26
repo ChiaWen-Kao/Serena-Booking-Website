@@ -215,6 +215,9 @@
 .card-title {
   color: var(--dark1);
   font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .card-subtitle {
